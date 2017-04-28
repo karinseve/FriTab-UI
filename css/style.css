@@ -106,3 +106,7 @@ nav ul li.active.attivita a{
 	font-size:0.75em;
 	color: grey;
 }
+
+.small-img {
+	max-height: 4em;
+}

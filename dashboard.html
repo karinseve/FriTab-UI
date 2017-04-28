@@ -79,7 +79,7 @@
          <div class="col s12">
           <ul class="collapsible" data-collapsible="accordion">
             <li>
-              <div class="collapsible-header active"><a href="activities.html"><i class="material-icons">today</i>In programma</a></div>
+              <div class="collapsible-header"><a href="activities.html"><i class="material-icons">today</i>In programma</a></div>
             </li>
             <li>
               <div class="collapsible-header"><a href="act-past.html"><i class="material-icons">history</i>Attività passate</a></div>
@@ -88,7 +88,7 @@
               <div class="collapsible-header"><a href="#crea-att"><i class="material-icons">add_circle</i>Crea attività</a></div>
             </li>
             <li>
-              <div class="collapsible-header"><a href="dashboard.html"><i class="material-icons">assignment</i>Sommario</a></div>
+              <div class="collapsible-header active"><a href="dashboard.html"><i class="material-icons">assignment</i>Sommario</a></div>
             </li>
           </ul>
         </div>
@@ -109,7 +109,7 @@
       <div class="details col s12" id="obiettivi">
         <div class="row">
           <div class="col s2">
-            <img src="img/target.png" alt="" class="responsive-img">
+            <img src="img/archery.png" alt="" class="responsive-img">
           </div>
           <div class="col s10">
             <h5>OBIETTIVI</h5>
@@ -149,7 +149,7 @@
       <div class="details col s12" id="conquiste">
         <div class="row">
           <div class="col s2">
-            <img src="img/trophy.png" alt="" class="responsive-img">
+            <img src="img/medal.png" alt="" class="responsive-img">
           </div>
           <div class="col s10">
             <h5>CONQUISTE</h5>
@@ -176,6 +176,61 @@
           </div>
         </div>
         <div class="row section">
+          <div class="col s7">
+            <ul class="details tabs act-tabs z-depth-1">
+              <li class="tab"><a href="#chall-act" class="active black-text">Sfide attive</a></li>
+              <li class="tab"><a href="#chall-past" class="black-text">Sfide passate</a></li>
+            </ul>
+          </div>
+          <div class="col s5 create-btn">
+            <a class="modal-trigger waves-effect waves-light btn" href="#chall-create"><i class="material-icons left">add_circle</i> CREA SFIDA</a>
+          </div>
+
+          <div class="col s12" id="chall-act">
+            <ul class="collection">
+              <li class="collection-item avatar">
+                <img src="img/medieval-fencing.png" alt="" class="circle">
+                <span class="title">Stai sfidando Alberto</span>
+                <p>In <a href="#" style="color: #40C4FF"> passi</a> percorsi<br/>
+                   Fino al 12 maggio</p>
+              </li>
+              <li class="collection-item avatar">
+                <img src="img/medieval-fencing.png" alt="" class="circle">
+                <span class="title">Stai sfidando Massimo</span>
+                <p>In <a href="#" style="color: #FF7043"> minuti</a> camminati<br/>
+                   Dal 5 maggio al 10 maggio </p>
+              </li>
+              <li class="collection-item avatar">
+                <img src="img/medieval-fencing.png" alt="" class="circle">
+                <span class="title">Stai sfidando Cristina</span>
+                <p>In <a href="#" style="color: #66BB6A"> chilometri</a> percorsi<br/>
+                   Dal 13 maggio al 27 maggio</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col s12" id="chall-past">
+            <ul class="collection">
+              <li class="collection-item avatar">
+                <img src="img/cup.png" alt="" class="circle small-img">
+                <span class="title">Hai sfidato Matteo</span>
+                <p>In <a href="#" style="color: #40C4FF"> passi</a> percorsi fino al 2 aprile<br/><br/>
+                <a href="#" style="color: #00C853">Hai vinto</a></p>
+              </li>
+              <li class="collection-item avatar">
+                <img src="img/medieval-fencing.png" alt="" class="circle small-img">
+                <span class="title">Hai sfidato Claudia</span>
+                <p>In <a href="#" style="color: #FF7043"> minuti</a> camminati fino al 10 maggio<br/><br/>
+                  <a href="#" style="color: #F44336">Hai perso</a></p>
+              </li>
+              <li class="collection-item avatar">
+                <img src="img/medieval-fencing.png" alt="" class="circle">
+                <span class="title">Hai sfidato Paolo</span>
+                <p>In <a href="#" style="color: #66BB6A"> chilometri</a> percorsi fino al 27 marzo<br/><br/>
+                  <a href="#" style="color: #00C853">Hai vinto</a></p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <!-- Fine Sfide -->
