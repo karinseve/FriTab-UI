@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FriTab</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+  <link rel="stylesheet" type="text/css" href="css/chartist-plugin-tooltip.css">
+</head>
+
+<body>
+
+
+  <!--Side Nav-->
+  <ul id="slide-out" class="side-nav">
+    <li><div class="userView">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+      <a href="#!name"><span class="white-text name">John Doe</span></a>
+      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+  <!-- End Nav-->
+
+  <div class="row">
+    <nav class="main-navbar">
+      <div class="nav-wrapper">
+        <ul>
+          <li>
+          <a href="#" data-activates="slide-out" class="menu-btn btn">Menu</a></li>
+            <li class="profilo">
+              <a href="#profilo"><i class="material-icons left">person</i>Profilo</a>
+            </li>
+            <li class="active attivita">
+              <a href="#attivita"><i class="material-icons left">directions_walk</i>Attività</a>
+            </li>
+            <li class="gruppi">
+              <a href="#gruppi"><i class="material-icons left">people</i>Gruppi</a>
+            </li>
+            <li class="eventi">
+              <a href="#eventi"><i class="material-icons left">date_range</i>Eventi</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- search 3, main 7, create 3 -->
+    <div class="row">
+      <div class="col s4">
+        <div class="row">
+          <div class="col s12">
+            <form>
+              <div class="input-field">
+                <input id="search" type="search" required>
+                <label class="label-icon white-text" for="search"><i class="material-icons">search</i>Cerca attività</label>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+         <div class="col s12">
+          <ul class="collapsible" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header active"><a href="activities.html"><i class="material-icons">today</i>In programma</a></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><a href="act-past.html"><i class="material-icons">history</i>Attività passate</a></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><a href="#crea-att"><i class="material-icons">add_circle</i>Crea attività</a></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><a href="dashboard.html"><i class="material-icons">assignment</i>Sommario</a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col s8">
+      <div class="row">
+        <div class="col s12">
+          <ul class="tabs act-tabs">
+            <li class="tab"><a href="#obiettivi" class="active black-text">obiettivi</a></li>
+            <li class="tab"><a href="#conquiste" class="black-text">conquiste</a></li>
+            <li class="tab"><a href="#sfide" class="black-text">sfide</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Obiettivi -->
+      <div class="details col s12" id="obiettivi">
+        <div class="row">
+          <div class="col s2">
+            <img src="img/target.png" alt="" class="responsive-img">
+          </div>
+          <div class="col s10">
+            <h5>OBIETTIVI</h5>
+          </div>
+        </div>
+        <div class="row section">
+          <div class="col s8">
+            <h5>GIORNALIERI</h5>
+          </div>
+          <div class="col s4 create-btn">
+            <a class="modal-trigger waves-effect waves-light btn" href="#edit-dashboard"><i class="material-icons left">edit</i> modifica</a>
+          </div>
+          <div class="col s12">
+            <ul class="collection">
+              <li class="collection-item avatar">
+                <img src="img/footsteps.png" alt="" class="circle">
+                <span class="title">Passi</span>
+                <p>2000 passi/giorno</p>
+              </li>
+              <li class="collection-item avatar">
+                <img src="img/dark-road.png" alt="" class="circle">
+                <span class="title">Chilometri</span>
+                <p>3 km/giorno</p>
+              </li>
+              <li class="collection-item avatar">
+                <img src="img/stopwatch.png" alt="" class="circle">
+                <span class="title">Minuti</span>
+                <p>90 minuti/giorno</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Fine Obiettivi -->
+
+      <!-- Conquiste -->
+      <div class="details col s12" id="conquiste">
+        <div class="row">
+          <div class="col s2">
+            <img src="img/trophy.png" alt="" class="responsive-img">
+          </div>
+          <div class="col s10">
+            <h5>CONQUISTE</h5>
+          </div>
+        </div>
+        <div class="row section">
+          <div class="ct-chart ct-minor-second"></div>
+        </div>
+
+        <div class="row section">
+          <div class="ct-chart-pie ct-minor-second"></div>
+        </div>
+      </div>
+      <!-- Fine Conquiste -->
+
+      <!-- Sfide -->
+      <div class="details col s12" id="sfide">
+        <div class="row">
+          <div class="col s2">
+            <img src="img/podium.png" alt="" class="responsive-img">
+          </div>
+          <div class="col s10">
+            <h5>SFIDE</h5>
+          </div>
+        </div>
+        <div class="row section">
+        </div>
+      </div>
+      <!-- Fine Sfide -->
+
+    </div>
+  </div>
+</div>
+
+  <!-- Crea modal Structure -->
+  <div id="crea-att" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Crea attività</h4>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Aggiungi un nome breve e chiaro" id="titolo" type="text" class="validate">
+              <label for="titolo">Nome attività</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea placeholder="Spiega meglio l'evento alle persone" id="descrizione" type="text" class="materialize-textarea"></textarea>
+              <label for="icon_telephone">Descrizione</label>
+            </div>
+            <div class="input-field col s12">
+              <input placeholder="Includi un luogo o un indirizzo" id="luogo" type="text" class="validate">
+              <label for="luogo">Luogo</label>
+            </div>
+            <div class="input-field col s4">
+              <input id="data" type="date" class="datepicker">
+              <label for="data">Data</label>
+            </div>
+            <div class="input-field col s4">
+              <input  id="ora" type="time" class="validate">
+              <label for="ora">Ora</label>
+            </div>
+            <div class="col s4">
+              <p href="#">+ Orario di fine</p>
+            </div>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Aggiungi una notifica</option>
+                <option value="1">10 minuti prima</option>
+                <option value="2">1 ora prima</option>
+                <option value="3">9 ore prima</option>
+              </select>
+              <label>Notifica</label>
+            </div>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Invita un gruppo</option>
+                <option value="1">Camminata</option>
+                <option value="2">Teatro</option>
+                <option value="3">Golf</option>
+              </select>
+              <label>Invita</label>
+            </div>
+            <div class="input-field col s12">
+              <input type="text" id="autocomplete-input" class="autocomplete">
+              <label for="autocomplete-input">Invita persone</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat crea">Crea</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat annulla">Annulla</a>
+    </div>
+  </div>
+  <!-- fine modal -->
+
+  <!-- Edit Dashboard modal-->
+  <div id="edit-dashboard" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modifica obiettivi</h4>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="steps" type="number" class="validate">
+              <label for="steps">Passi/giorno</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="km" type="number" class="validate">
+              <label for="km">Chilometri/giorno</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="active-hours" type="number" class="validate">
+              <label for="active-hours">Ore di movimento/giorno</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat crea">Fatto</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat annulla">Annulla</a>
+    </div>
+  </div>
+  <!-- fine modal -->
+
+    <!--Import jQuery before materialize.js-->
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+
+  <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  <script src="js/chartist-plugin-axistitle.min.js"></script>
+  <script src="js/chartist-plugin-tooltip.min.js" ></script>
+  <script src="js/chartist-plugin-threshold.min.js" ></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+   $(function(){
+      var w =  $(window).width()*6.5/12;
+      var data = {
+        // A labels array that can contain any sort of values
+        labels: ['L', 'M', 'M', 'G', 'V', 'S', 'D'],
+        // Our series array that contains series objects or in this case series data arrays
+        series: [
+          [
+            { meta: '0.46 34' , value: 600},
+            { meta: '1.87 68' , value: 2450},
+            { meta: '1.37 56' , value: 1800},
+            { meta: '2.44 99' , value: 3200},
+            { meta: '1.6  59' , value: 2100},
+            { meta: '0.19 17' , value: 250},
+            { meta: '4.64 148' , value: 6090}
+          ]
+        ],
+      };
+
+      var options = {
+        height: w*(3/4),
+        width: w,
+        chartPadding: {
+            top: 20,
+            right: 0,
+            bottom: 30,
+            left: 30
+        },
+        showArea: true,
+        plugins: [
+          Chartist.plugins.ctAxisTitle({
+              axisX: {
+                  axisTitle: 'Giorno',
+                  axisClass: 'ct-axis-title',
+                  offset: {
+                      x: 0,
+                      y: 50
+                  },
+                  textAnchor: 'middle'
+              },
+              axisY: {
+                  axisTitle: 'Passi',
+                  axisClass: 'ct-axis-title',
+                  offset: {
+                      x: 0,
+                      y: -1
+                  },
+                  flipTitle: false
+              }
+          }),
+          Chartist.plugins.tooltip({
+            tooltipFnc : function(meta, value){
+                v = meta.split(" ");
+                text = 'Passi: <span class="chartist-tooltip-value">' + value + '</span>'
+                       + '<br />Km: <span class="chartist-tooltip-meta">' + v[0] + '</span>'+ '<br/>Minuti: <span class="chartist-tooltip-meta">' + v[1] + '</span>' ;
+                return text;
+            }
+          })
+        ]
+
+      };
+    new Chartist.Line('.ct-chart', data, options);
+   })
+  </script>
+  <script>
+    $(function() {
+    new Chartist.Pie('.ct-chart-pie', {
+      series: [20, 10, 30, 40]
+    }, {
+      donut: true,
+      donutWidth: 80,
+      donutSolid: true,
+      startAngle: 240,
+      showLabel: true
+    });
+  });
+  </script>
+
+</body>
+</html>

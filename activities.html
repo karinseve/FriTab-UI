@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FriTab</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+</head>
+
+<body>
+
+
+  <!--Side Nav-->
+  <ul id="slide-out" class="side-nav">
+    <li><div class="userView">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+      <a href="#!name"><span class="white-text name">John Doe</span></a>
+      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+  <!-- End Nav-->
+
+  <div class="row">
+    <nav class="main-navbar">
+      <div class="nav-wrapper">
+        <ul>
+          <li>
+          <a href="#" data-activates="slide-out" class="menu-btn btn">Menu</a></li>
+            <li class="profilo">
+              <a href="#profilo"><i class="material-icons left">person</i>Profilo</a>
+            </li>
+            <li class="active attivita">
+              <a href="#attivita"><i class="material-icons left">directions_walk</i>Attività</a>
+            </li>
+            <li class="gruppi">
+              <a href="#gruppi"><i class="material-icons left">people</i>Gruppi</a>
+            </li>
+            <li class="eventi">
+              <a href="#eventi"><i class="material-icons left">date_range</i>Eventi</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- search 3, main 7, create 3 -->
+    <div class="row">
+      <div class="col s4">
+        <div class="row">
+         <div class="col s12">
+          <form>
+            <div class="input-field">
+              <input id="search" type="search" required>
+              <label class="label-icon white-text" for="search"><i class="material-icons">search</i>Cerca attività</label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+       <div class="col s12">
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header active"><a href="activities.html"><i class="material-icons">today</i>In programma</a></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><a href="act-past.html"><i class="material-icons">history</i>Attività passate</a></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><a href="#crea-att"><i class="material-icons">add_circle</i>Crea attività</a></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><a href="dashboard.html"><i class="material-icons">assignment</i>Sommario</a></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col s8">
+    <div class="row">
+      <div class="col s7">
+        <ul class="tabs act-tabs">
+          <li class="tab"><a href="#all" class="active black-text" >Tutte</a></li>
+          <li class="tab"><a href="#org" class="black-text">Organizzate</a></li>
+          <li class="tab"><a href="#sugg" class="black-text">Suggerimenti</a></li>
+        </ul>
+      </div>
+      <div class="col s5 create-btn">
+        <a class="modal-trigger waves-effect waves-light btn" href="#crea-att"><i class="material-icons left">add_circle</i> CREA ATTIVITÀ</a>
+      </div>
+    </div>
+    <div class="col s12" id="all">
+      <div class="row">
+        <h6 class="title-periods">QUESTA SETTIMANA</h6>
+        <div class="card horizontal">
+          <div class="col s3 imge">
+            <div class="card-image">
+              <div class="row first">
+                <div class="col s12">
+                  <p>APR 19</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <p><i class="material-icons left small">place</i>TRENTO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s9">
+            <div class="card-stacked">
+              <div class="card-content">
+                <span class="card-title">Camminata in Montagna</span>
+                <p>Domani alle ore 10:00</p>
+                <p><i class="material-icons left">place</i>Passo Lavazè</p>
+              </div>
+              <div class="card-action">
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-button btn' href='#' data-activates='partecipero'><i class="material-icons left">check</i><i class="material-icons right">arrow_drop_down</i>Parteciperò</a>
+                <!-- Dropdown Structure -->
+                <ul id='partecipero' class='dropdown-content'>
+                  <li><a href="#!">Non parteciperò</a></li>
+                </ul>
+                <a class="waves-effect waves-light btn" href="act-details.html"><i class="material-icons right">keyboard_arrow_right</i>dettagli</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="card horizontal">
+            <div class="col s3 imge">
+              <div class="card-image">
+                <div class="row first">
+                  <div class="col s12">
+                    <p>APR 23</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <p><i class="material-icons left small">place</i>COGNOLA</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s9">
+              <div class="card-stacked">
+                <div class="card-content">
+                  <span class="card-title">Film Titanic</span>
+                  <p>Domenica 23 Aprile alle ore 20:30</p>
+                  <p><i class="material-icons left">place</i>Argentario di Cognola</p>
+                </div>
+                <div class="card-action">
+                  <!-- Dropdown Trigger -->
+                  <a class="dropdown-button btn" href="#" data-activates="partecipero-sec">
+                  <i class="material-icons left">check</i><i class="material-icons right">arrow_drop_down</i>Parteciperò
+                  </a>
+                  <ul id="partecipero-sec" class="dropdown-content">
+                    <li><a href="#!">Non parteciperò</a></li>
+                  </ul>
+                  <a class="waves-effect waves-light btn "><i class="material-icons right">keyboard_arrow_right</i>dettagli</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="title-periods">QUESTO MESE</h6>
+            <div class="card horizontal">
+              <div class="col s3 imge">
+                <div class="card-image">
+                  <div class="row first">
+                    <div class="col s12">
+                      <p>APR 29</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <p><i class="material-icons left small">place</i>LEVICO</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s9">
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <span class="card-title">Giro del Lago</span>
+                    <p>Sabato 29 Aprile alle ore 14:30</p>
+                    <p><i class="material-icons left">place</i>Lago di Levico</p>
+                  </div>
+                  <div class="card-action">
+                    <!-- Dropdown Trigger -->
+                    <a class="dropdown-button btn" href="#" data-activates="partecipero-third">
+                      <i class="material-icons left">check</i><i class="material-icons right">arrow_drop_down</i>Parteciperò
+                    </a>
+                    <ul id="partecipero-third" class="dropdown-content">
+                      <li><a href="#!">Non parteciperò</a></li>
+                    </ul>
+                    <a class="waves-effect waves-light btn "><i class="material-icons right">keyboard_arrow_right</i>dettagli</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Attività create -->
+    <div class="col s12" id="org">
+      <div class="card horizontal">
+          <div class="col s3 imge">
+            <div class="card-image">
+              <div class="row first">
+                <div class="col s12">
+                  <p>MAG 10</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <p><i class="material-icons left small">place</i>TRENTO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s9">
+            <div class="card-stacked">
+              <div class="card-content">
+                <span class="card-title">Appuntamento al Cinema <a class="btn-floating btn waves-effect waves-light blue lighten-3" href="#modifica"><i class="material-icons">edit</i></a></span>
+                <p>Mercoledì 10 Maggio alle ore 21:00</p>
+                <p><i class="material-icons left">place</i>Cinema Astra</p>
+              </div>
+              <div class="card-action">
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-button btn' href='#' data-activates='invita'><i class="material-icons left">check</i><i class="material-icons right">arrow_drop_down</i>Invita</a>
+                <!-- Dropdown Structure -->
+                <ul id='invita' class='dropdown-content'>
+                  <li><a href="#!">Scegli amici</a></li>
+                  <li><a href="#!">Scegli gruppo</a></li>
+                </ul>
+                <a class="modal-trigger waves-effect waves-light btn"><i class="material-icons right">keyboard_arrow_right</i>dettagli</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card horizontal">
+          <div class="col s3 imge">
+            <div class="card-image">
+              <div class="row first">
+                <div class="col s12">
+                  <p>MAG 10</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <p><i class="material-icons left small">place</i>TRENTO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s9">
+            <div class="card-stacked">
+              <div class="card-content">
+                <span class="card-title">Appuntamento al Cinema <a class="btn-floating btn waves-effect waves-light blue lighten-3" href="#modifica"><i class="material-icons">edit</i></a></span>
+                <p>Mercoledì 10 Maggio alle ore 21:00</p>
+                <p><i class="material-icons left">place</i>Cinema Astra</p>
+              </div>
+              <div class="card-action">
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-button btn' href='#' data-activates='invita-sec'><i class="material-icons left">check</i><i class="material-icons right">arrow_drop_down</i>Invita</a>
+                <!-- Dropdown Structure -->
+                <ul id='invita-sec' class='dropdown-content'>
+                  <li><a href="#!">Scegli amici</a></li>
+                  <li><a href="#!">Scegli gruppo</a></li>
+                </ul>
+                <a class="waves-effect waves-light btn"><i class="material-icons right">keyboard_arrow_right</i>dettagli</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card horizontal">
+          <div class="col s3 imge">
+            <div class="card-image">
+              <div class="row first">
+                <div class="col s12">
+                  <p>MAG 10</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <p><i class="material-icons left small">place</i>TRENTO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s9">
+            <div class="card-stacked">
+              <div class="card-content">
+                <span class="card-title">Appuntamento al Cinema <a class="btn-floating btn waves-effect waves-light blue lighten-3"  href="#modifica"><i class="material-icons">edit</i></a></span>
+                <p>Mercoledì 10 Maggio alle ore 21:00</p>
+                <p><i class="material-icons left">place</i>Cinema Astra</p>
+              </div>
+              <div class="card-action">
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-button btn' href='#' data-activates='invita-third'><i class="material-icons left">check</i><i class="material-icons right">arrow_drop_down</i>Invita</a>
+                <!-- Dropdown Structure -->
+                <ul id='invita-third' class='dropdown-content'>
+                  <li><a href="#!">Scegli amici</a></li>
+                  <li><a href="#!">Scegli gruppo</a></li>
+                </ul>
+                <a class="waves-effect waves-light btn"><i class="material-icons right">keyboard_arrow_right</i>dettagli</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- Attività suggerite -->
+    <div class="col s12" id="sugg">
+      <div class="row">
+        <h6 class="title-periods">QUESTO MESE</h6>
+        <div class="card horizontal">
+          <div class="col s3 imge">
+            <div class="card-image">
+              <div class="row first">
+                <div class="col s12">
+                  <p>APR 19</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <p><i class="material-icons left small">place</i>TRENTO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s9">
+            <div class="card-stacked">
+              <div class="card-content">
+                <span class="card-title">Camminata in Montagna <a class="btn-floating btn waves-effect waves-light red lighten-1"><i class="material-icons">clear</i></a></span></span>
+                <p>Domani alle ore 10:00</p>
+                <p><i class="material-icons left">place</i>Passo Lavazè</p>
+              </div>
+              <div class="card-action">
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-button btn' href='#'><i class="material-icons left">check</i>Partecipa</a>
+                <!-- Dropdown Structure -->
+
+                <a class="waves-effect waves-light btn" href="act-details.html"><i class="material-icons right">keyboard_arrow_right</i>dettagli</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card horizontal">
+          <div class="col s3 imge">
+            <div class="card-image">
+              <div class="row first">
+                <div class="col s12">
+                  <p>APR 19</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <p><i class="material-icons left small">place</i>TRENTO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s9">
+            <div class="card-stacked">
+              <div class="card-content">
+                <span class="card-title">Camminata in Montagna <a class="btn-floating btn waves-effect waves-light red lighten-1"><i class="material-icons">clear</i></a></span></span>
+                <p>Domani alle ore 10:00</p>
+                <p><i class="material-icons left">place</i>Passo Lavazè</p>
+              </div>
+              <div class="card-action">
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-button btn' href='#'><i class="material-icons left">check</i>Partecipa</a>
+                <!-- Dropdown Structure -->
+
+                <a class="waves-effect waves-light btn" href="act-details.html"><i class="material-icons right">keyboard_arrow_right</i>dettagli</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card horizontal">
+          <div class="col s3 imge">
+            <div class="card-image">
+              <div class="row first">
+                <div class="col s12">
+                  <p>APR 19</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <p><i class="material-icons left small">place</i>TRENTO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s9">
+            <div class="card-stacked">
+              <div class="card-content">
+                <span class="card-title">Camminata in Montagna <a class="btn-floating btn waves-effect waves-light red lighten-1"><i class="material-icons">clear</i></a></span></span>
+                <p>Domani alle ore 10:00</p>
+                <p><i class="material-icons left">place</i>Passo Lavazè</p>
+              </div>
+              <div class="card-action">
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-button btn' href='#'><i class="material-icons left">check</i>Partecipa</a>
+                <!-- Dropdown Structure -->
+
+                <a class="waves-effect waves-light btn" href="act-details.html"><i class="material-icons right">keyboard_arrow_right</i>dettagli</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <!-- Crea modal Structure -->
+  <div id="crea-att" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Crea attività</h4>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Aggiungi un nome breve e chiaro" id="titolo" type="text" class="validate">
+              <label for="titolo">Nome attività</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea placeholder="Spiega meglio l'evento alle persone" id="descrizione" type="text" class="materialize-textarea"></textarea>
+              <label for="icon_telephone">Descrizione</label>
+            </div>
+            <div class="input-field col s12">
+              <input placeholder="Includi un luogo o un indirizzo" id="luogo" type="text" class="validate">
+              <label for="luogo">Luogo</label>
+            </div>
+            <div class="input-field col s4">
+              <input id="data" type="date" class="datepicker">
+              <label for="data">Data</label>
+            </div>
+            <div class="input-field col s4">
+              <input  id="ora" type="time" class="validate">
+              <label for="ora">Ora</label>
+            </div>
+            <div class="col s4">
+              <p href="#">+ Orario di fine</p>
+            </div>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Aggiungi una notifica</option>
+                <option value="1">10 minuti prima</option>
+                <option value="2">1 ora prima</option>
+                <option value="3">9 ore prima</option>
+              </select>
+              <label>Notifica</label>
+            </div>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Invita un gruppo</option>
+                <option value="1">Camminata</option>
+                <option value="2">Teatro</option>
+                <option value="3">Golf</option>
+              </select>
+              <label>Invita</label>
+            </div>
+            <div class="input-field col s12">
+              <input type="text" id="autocomplete-input" class="autocomplete">
+              <label for="autocomplete-input">Invita persone</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat crea">Crea</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat annulla">Annulla</a>
+    </div>
+  </div>
+  <!-- fine modal -->
+
+
+  <!-- Modifica modal Structure -->
+  <div id="modifica" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modifica attività</h4>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Aggiungi un nome breve e chiaro" id="titolo" type="text" class="validate">
+              <label for="titolo">Nome attività</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea placeholder="Spiega meglio l'evento alle persone" id="descrizione" type="text" class="materialize-textarea"></textarea>
+              <label for="icon_telephone">Descrizione</label>
+            </div>
+            <div class="input-field col s12">
+              <input placeholder="Includi un luogo o un indirizzo" id="luogo" type="text" class="validate">
+              <label for="luogo">Luogo</label>
+            </div>
+            <div class="input-field col s4">
+              <input id="data" type="date" class="datepicker">
+              <label for="data">Data</label>
+            </div>
+            <div class="input-field col s4">
+              <input  id="ora" type="time" class="validate">
+              <label for="ora">Ora</label>
+            </div>
+            <div class="col s4">
+              <p href="#">+ Orario di fine</p>
+            </div>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Aggiungi una notifica</option>
+                <option value="1">10 minuti prima</option>
+                <option value="2">1 ora prima</option>
+                <option value="3">9 ore prima</option>
+              </select>
+              <label>Notifica</label>
+            </div>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Invita un gruppo</option>
+                <option value="1">Camminata</option>
+                <option value="2">Teatro</option>
+                <option value="3">Golf</option>
+              </select>
+              <label>Invita</label>
+            </div>
+            <div class="input-field col s12">
+              <input type="text" id="autocomplete-input" class="autocomplete">
+              <label for="autocomplete-input">Invita persone</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat crea">Crea</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat annulla">Annulla</a>
+    </div>
+  </div>
+
+
+    <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

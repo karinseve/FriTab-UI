@@ -1,0 +1,108 @@
+body {
+	background-color:#CFD8DC; /*#90A4AE*/
+}
+
+.main-navbar{
+	background-color: #607D8B;
+}
+
+nav ul li.active.attivita{
+	background-color: #FFF176;
+}
+
+nav ul li.active.attivita a{
+	color: #000000;
+}
+
+.btn{
+	background-color: #FFF176;
+	color: #000000;
+}
+
+.collapsible .collapsible-header.active {
+	background-color: #FFF176;
+}
+
+.tabs{
+	background-color: #CFD8DC; /*#90A4AE*/
+}
+
+.tabs .indicator{
+	background-color: #FFF176;
+}
+
+.title-periods{
+	color: #546E7A;
+}
+.card.horizontal .col.s3{
+	background-color: #A5D6A7;
+}
+
+.card.horizontal .row{
+	margin-top: 0;
+}
+
+.card .imge p{
+	font-size: 20px;
+	font-weight: 700;
+	margin-top: 0;
+}
+
+.card.horizontal .row.first{
+	margin-bottom: 80;
+}
+
+.card-content .card-title{
+	font-weight: bold;
+}
+
+
+.input-field label {
+	color: #000000;
+}
+
+.modal-footer .modal-action.annulla{
+	color: #455A64;
+}
+
+
+.details{
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.activity.divider{
+	background-color:#90A4AE;
+}
+
+.details.tabs{
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+.details.tabs .indicator{
+	background-color: #37474F;
+}
+
+.row.section{
+	background-color: #FFFFFF;
+}
+
+.sub-btn.btn{
+	background-color: #3949AB;
+	color: #FFFFFF;
+}
+
+.float-container{
+	position: relative;
+}
+
+#go-btn {
+	right:3em;
+	bottom:3em;
+
+}
+
+.date-text {
+	font-size:0.75em;
+	color: grey;
+}
