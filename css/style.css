@@ -10,6 +10,14 @@ nav ul li.active.attivita{
 	background-color: #FFF176;
 }
 
+nav ul li.active.gruppi{
+	background-color: #4CAF50;
+}
+
+nav ul li.active.gruppi a{
+	color: #000000;
+}
+
 nav ul li.active.attivita a{
 	color: #000000;
 }
@@ -29,6 +37,10 @@ nav ul li.active.attivita a{
 
 .tabs .indicator{
 	background-color: #FFF176;
+}
+
+.tabs.gruppi .indicator{
+	background-color: #4CAF50;
 }
 
 .title-periods{

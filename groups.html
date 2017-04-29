@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FriTab</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+</head>
+
+<body>
+
+
+  <!--Side Nav-->
+  <ul id="slide-out" class="side-nav">
+    <li><div class="userView">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+      <a href="#!name"><span class="white-text name">John Doe</span></a>
+      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+  <!-- End Nav-->
+
+  <div class="row">
+    <nav class="main-navbar">
+      <div class="nav-wrapper">
+        <ul>
+          <li>
+          <a href="#" data-activates="slide-out" class="menu-btn btn">Menu</a></li>
+          <li class="profilo">
+            <a href="#profilo"><i class="material-icons left">person</i>Profilo</a>
+          </li>
+          <li class="attivita">
+            <a href="activities.html"><i class="material-icons left">directions_walk</i>Attività</a>
+          </li>
+          <li class="active gruppi">
+            <a href="groups.html"><i class="material-icons left">people</i>Gruppi</a>
+          </li>
+          <li class="eventi">
+            <a href="#eventi"><i class="material-icons left">date_range</i>Eventi</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs gruppi">
+        <li class="tab col s6"><a class="active black-text" href="#liste">Liste di persone</a></li>
+        <li class="tab col s6"><a class="black-text" href="#gruppi">Gruppi</a></li>
+      </ul>
+    </div>
+    <!-- Liste di persone -->
+    <div id="liste" class="col s12">
+
+    </div>
+    <!-- Fine liste -->
+
+    <!-- Gruppi -->
+    <div id="gruppi" class="col s12">
+
+    </div>
+    <!-- Fine gruppi -->
+  </div>
+
+
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
