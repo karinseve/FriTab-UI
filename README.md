@@ -1,5 +1,7 @@
 # Cose da fare:
 
+- barra superiore: tenerla ferma quando si scrolla      
+
 **SISTEMARE PULSANTE CERCA** *//tutti i file che ci sono*        
 **SIDENAV**
 
@@ -20,4 +22,6 @@
 **Sommario**:       
 - sistemare grandezza icone, titoli, margini - *//dashboard.html*        
 - parte conquiste: sistemare i 2 grafici (oltre che icona e titolo) - *//dashboard.html*       
-- parte sfide: titolo, icona, parte sfide passate - *//dashboard.html*
+- parte sfide: titolo, icona, parte sfide passate - *//dashboard.html*      
+
+**Gruppi**:
