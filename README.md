@@ -1,6 +1,7 @@
 # Cose da fare:
 
 **SISTEMARE PULSANTE CERCA** *//tutti i file che ci sono*
+**SIDENAV**
 
 **Attività in programma**:     
 - sistemare scritte nelle cards (sia nella parte immagine che l'icona della posizione con l'indirizzo) - *//activities.html*     
