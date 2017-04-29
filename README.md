@@ -25,4 +25,5 @@
 - parte sfide: titolo, icona, parte sfide passate - *//dashboard.html*      
 
 **Gruppi**:      
-- dettagli amici aggiungere pulsante (?) sposta ....
+- dettagli amici aggiungere pulsante (?) sposta ....     
+- tasto aggiungi... alle liste di amici
