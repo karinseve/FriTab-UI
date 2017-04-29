@@ -1,6 +1,5 @@
 # Cose da fare:
-
-- barra superiore: tenerla ferma quando si scrolla      
+   
 
 **SISTEMARE PULSANTE CERCA** *//tutti i file che ci sono*        
 **SIDENAV**
