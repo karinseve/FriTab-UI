@@ -8,6 +8,10 @@
 - dettagli camminata in montagna: sistemare titoli, icone, meteo - *//act-details.html*     
 - attività organizzate: sistemare scritte cards (come sopra) + centratura icona nel pulsante tondo, pulsante invita - *//activities.html*      
 - suggerimenti attività: sistemare cards (come sopra) + centratura icone pulsante e stessa cosa di sopra nei dettagli - *//activities.html*   
+
+**Crea attività**:        
+- sistemare allineamento ora con l'effettivo testo - *//tutte le view (modal crea attività)*       
+- aggiungere pulsante per '+ orario di fine' e fare JS che fa comparire 1 nuovo Data&Ora (un po' come gli orari dei ristoranti in web)
     
 **Attività passate**:     
 - sistemare cards, in dettagli sistemare titoli, icone, parte meteo E parte FOTO (molto importante) - *//act-past.html & past-act-details.html*       
