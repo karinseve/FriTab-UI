@@ -15,7 +15,12 @@ $(document).ready(function(){
     $('input.autocomplete').autocomplete({
     data: {
       "Christian": null,
-      "Alberto": null
+      "Carlo": null,
+      "Alberto": null,
+      "Giorgio": null,
+      "Marina": null,
+      "Erica": null,
+
     },
     limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
     onAutocomplete: function(val) {

@@ -2,6 +2,41 @@ body {
 	background-color:#CFD8DC; /*#90A4AE*/
 }
 
+.search-wrap {
+	border-bottom: 1px solid #fff;
+	box-shadow: 0 1 0 0 #fff;
+	background-color: #fff;
+	color: #000;
+}
+
+.search-wrap .prefix,
+.search-wrap label  {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.search-wrap .prefix {
+	top: 7px;
+	left: 7px;
+}
+
+.input-field.search-wrap input,
+.input-field.search-wrap input:focus  {
+	border-bottom: 0 solid #fff;
+	box-shadow: 0 0 0 0 #fff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+.search-wrap label.active {
+	display: none;
+}
+
+.search-wrap .dropdown-content {
+	position: absolute;
+}
+
+
 .main-navbar{
 	background-color: #607D8B;
 }
@@ -46,6 +81,69 @@ nav ul li.active.attivita a{
 .title-periods{
 	color: #546E7A;
 }
+
+.card.activity .card-image {
+	background-color: #A5D6A7;
+	width: 25%;
+	padding: 0.5rem .75rem 0;
+}
+
+.card.activity .card-image .date,
+.card.activity .card-image .place {
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.card.activity .card-image .date .month {
+	font-size: 1.75em;
+	display: block;
+	line-height: 1;
+
+}
+
+.card.activity .card-image .date .day {
+	font-size: 3.5em;
+	display: block;
+	line-height: 0.85;
+
+}
+
+.card.activity .card-image .place {
+	font-size: 1.75em;
+	display: block;
+	line-height: 0.85;
+}
+
+.card.activity .card-image .place .pointer {
+	display: block;
+	margin:  0 auto;
+}
+
+
+.card.activity  .card-action .partecipa label {
+	color:  #000;
+}
+
+.card.activity  .card-action .partecipa label:before {
+	top: 2px;
+}
+.card.activity  .card-action .partecipa label:after{
+	margin-top: 2px;
+}
+
+.card.activity  .card-action .partecipa input[type="checkbox"]:checked+label:before {
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+
+.card.activity  .card-action .partecipa input[type="checkbox"].filled-in:checked+label:after {
+    border: 2px solid #000;
+    background-color: #fff;
+}
+/***** DA RIMUOVERE ****/
 .card.horizontal .col.s3{
 	background-color: #A5D6A7;
 }
