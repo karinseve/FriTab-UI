@@ -5,8 +5,7 @@
 **SIDENAV**
 
 **Attività in programma**:     
-  
-- pulsante Parteciperò (sistemare non parteciperò) - *//activities.html*      
+   
 - dettagli camminata in montagna: sistemare titoli, icone, meteo - *//act-details.html*     
 - attività organizzate: sistemare scritte cards (come sopra) + centratura icona nel pulsante tondo, pulsante invita + precompilazione dati nel pulsante modifica con JS - *//activities.html*      
 - suggerimenti attività: sistemare cards (come sopra) + centratura icone pulsante e stessa cosa di sopra nei dettagli - *//activities.html*   
