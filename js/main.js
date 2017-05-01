@@ -2,17 +2,52 @@ $(document).ready(function(){
 
 	$(".menu-btn").sideNav();
 
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal').modal();
+  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  $('#crea-att').modal();
 
-    $('.datepicker').pickadate({
+  $('#modifica').modal();
+
+  $('#crea-gruppo').modal();
+
+  $('#edit-group').modal();
+
+  $('#person-det').modal();
+
+  $('#edit-dashboard').modal();
+
+  $('#crea-lista').modal({
+    ready : function(modal, trigger){
+
+      $('.chips-autocomplete').material_chip({
+        autocompleteOptions: {
+          data: {
+           'Angela':  'img/girl.png',
+           'Mario': 'img/man.png',
+           'Elena': 'img/girl-2.png',
+           'Martino': 'img/boy.png',
+           'Alessandro': 'img/man.png',
+           'Antonia': 'img/girl-3.png',
+           'Elisa': 'img/girl.png',
+           'Valentina': 'img/girl-2.png'
+          },
+          limit: Infinity,
+          minLength: 1
+        }
+      });
+
+
+    }
+  })
+
+
+  $('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month
     selectYears: 3 // Creates a dropdown of 15 years to control year
-});
+  });
 
-    $('select').material_select();
+  $('select').material_select();
 
-    $('input.autocomplete').autocomplete({
+  $('input.autocomplete').autocomplete({
     data: {
       "Christian": null,
       "Carlo": null,
@@ -29,6 +64,7 @@ $(document).ready(function(){
     minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
   });
 
-    $('.next').slider('next');
+  $('.next').slider('next');
+
 
 });

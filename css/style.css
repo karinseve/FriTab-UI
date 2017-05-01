@@ -2,6 +2,9 @@ body {
 	background-color:#CFD8DC; /*#90A4AE*/
 }
 
+.btn {
+	padding: 0 1rem;
+}
 .search-wrap {
 	border-bottom: 1px solid #fff;
 	box-shadow: 0 1 0 0 #fff;
