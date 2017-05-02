@@ -76,6 +76,22 @@ nav ul li.active.attivita a{
 	color: #000000;
 }
 
+.card .card-action .dropdown-button.active,
+.card .card-action .dropdown-button:focus,
+.card .card-action .dropdown-button:hover {
+	background-color: #FFF176;
+}
+
+.card .card-action .dropdown-content {
+	margin-top: 2.75em;
+}
+
+.card .card-action .btn-flat:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating),
+.card .card-action .dropdown-content.active li a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+	color: #333;
+}
+
+
 .collapsible .collapsible-header.active {
 	background-color: #FFF176;
 }
