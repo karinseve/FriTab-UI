@@ -2,9 +2,20 @@ body {
 	background-color:#CFD8DC; /*#90A4AE*/
 }
 
-.btn {
+.material-icons.inline {
+	position: relative;
+	top: 0.25em;
+	margin-right: 0.25em;
+}
+
+.material-icons.icon-center{
+	margin-top: 0.2em;
+}
+
+.btn-smallmargin {
 	padding: 0 1rem;
 }
+
 .search-wrap {
 	border-bottom: 1px solid #fff;
 	box-shadow: 0 1 0 0 #fff;
@@ -146,20 +157,6 @@ nav ul li.active.attivita a{
     border: 2px solid #000;
     background-color: #fff;
 }
-/***** DA RIMUOVERE ****/
-.card.horizontal .col.s3{
-	background-color: #A5D6A7;
-}
-
-.card.horizontal .row{
-	margin-top: 0;
-}
-
-.card .imge p{
-	font-size: 20px;
-	font-weight: 700;
-	margin-top: 0;
-}
 
 .card.horizontal .row.first{
 	margin-bottom: 80;
@@ -183,6 +180,10 @@ nav ul li.active.attivita a{
 	background-color: rgba(255, 255, 255, 0.7);
 }
 
+.details .act-det{
+	margin-top: 1em;
+}
+
 .activity.divider{
 	background-color:#90A4AE;
 }
@@ -194,6 +195,10 @@ nav ul li.active.attivita a{
 
 .details.tabs .indicator{
 	background-color: #37474F;
+}
+
+.meteo-bigger {
+	font-size: 1.5em;
 }
 
 .row.section{
