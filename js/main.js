@@ -51,12 +51,12 @@ $(document).ready(function(){
 
   $('input.autocomplete').autocomplete({
     data: {
-      "Christian": null,
-      "Carlo": null,
-      "Alberto": null,
-      "Giorgio": null,
-      "Marina": null,
-      "Erica": null,
+      "Giro del lago di Garda": null,
+      "Golf": null,
+      "Nuoto": null,
+      "Sciare ad alta quota": null,
+      "Giri in barca a vela": null,
+      "Camminate nei boschi": null,
 
     },
     limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
@@ -74,79 +74,79 @@ $(document).ready(function(){
       var actDetailsData = {
         'id2' : {
           'details-day' : '23',
-          'details-month' : 'APR',
+          'details-month' : 'APRILE',
           'details-title' : 'Film Titanic',
-          'details-datetime' : 'Domenica 23 Aprile alle ore 20:30',
+          'details-datetime' : 'Domenica 23 Aprile 2017 alle ore 20:30',
           'details-loc' : 'Argentario di Cognola'
         },
         'id3' : {
           'details-day' : '29',
-          'details-month' : 'APR',
+          'details-month' : 'APRILE',
           'details-title' : 'Giro del Lago',
-          'details-datetime' : 'Sabato 29 Aprile alle ore 14:30',
+          'details-datetime' : 'Sabato 29 Aprile 2017 alle ore 14:30',
           'details-loc' : 'Lago di Levico'
         },
         'id4' : {
           'details-day' : '10',
-          'details-month' : 'MAG',
+          'details-month' : 'MAGGIO',
           'details-title' : 'Appuntamento al Cinema',
-          'details-datetime' : 'Mercoledì 10 Maggio alle ore 21:00',
+          'details-datetime' : 'Mercoledì 10 Maggio 2017 alle ore 21:00',
           'details-loc' : 'Cinema Astra'
         },
         'id5' : {
           'details-day' : '16',
-          'details-month' : 'MAG',
+          'details-month' : 'MAGGIO',
           'details-title' : 'Visita al castello di Soave',
-          'details-datetime' : 'Martedì 16 Maggio alle ore 11:15',
+          'details-datetime' : 'Martedì 16 Maggio 2017 alle ore 11:15',
           'details-loc' : 'Soave, VR'
         },
         'id6' : {
           'details-day' : '8',
-          'details-month' : 'GIU',
+          'details-month' : 'GIUGNO',
           'details-title' : 'Visita parco Natura Viva',
-          'details-datetime' : 'Giovedì 8 Giugno alle ore 08:30',
+          'details-datetime' : 'Giovedì 8 Giugno 2017 alle ore 08:30',
           'details-loc' : 'Parco Natura Viva'
         },
         'id7' : {
           'details-day' : '15',
-          'details-month' : 'MAG',
+          'details-month' : 'MAGGIO',
           'details-title' : 'Visita Castello del Buonconsiglio',
-          'details-datetime' : 'Lunedì 15 Maggio alle ore 10:00',
+          'details-datetime' : 'Lunedì 15 Maggio 2017 alle ore 10:00',
           'details-loc' : 'Castello del Buonconsiglio'
         },
         'id8' : {
           'details-day' : '20',
-          'details-month' : 'MAG',
+          'details-month' : 'MAGGIO',
           'details-title' : 'Visita a Bolzano',
-          'details-datetime' : 'Sabato 20 Maggio alle ore 08:00',
+          'details-datetime' : 'Sabato 20 Maggio 2017 alle ore 08:00',
           'details-loc' : 'Bolzano'
         },
         'id9' : {
           'details-day' : '2',
-          'details-month' : 'GIU',
+          'details-month' : 'GIUGNO',
           'details-title' : 'Aperitivo',
-          'details-datetime' : 'Venerdì 2 Giugno alle ore 18:00',
+          'details-datetime' : 'Venerdì 2 Giugno 2017 alle ore 18:00',
           'details-loc' : 'Piazza Duomo, Trento'
         },
         'id10' : {
           'details-day' : '10',
-          'details-month' : 'APR',
+          'details-month' : 'APRILE',
           'details-title' : 'Appuntamento al Cinema',
-          'details-datetime' : 'Lunedì 10 Aprile alle ore 21:00',
+          'details-datetime' : 'Lunedì 10 Aprile 2017 alle ore 21:00',
           'details-loc' : 'Cinema Astra'
         },
         'id11' : {
           'details-day' : '2',
-          'details-month' : 'APR',
+          'details-month' : 'APRILE',
           'details-title' : 'Giro di Bassano del Grappa',
-          'details-datetime' : 'Domenica 2 Aprile alle ore 10:00',
+          'details-datetime' : 'Domenica 2 Aprile 2017 alle ore 10:00',
           'details-loc' : 'Bassano del Grappa, VI'
         },
         'id12' : {
           'details-day' : '23',
-          'details-month' : 'MAR',
+          'details-month' : 'MARZO',
           'details-title' : 'Biciclettata',
-          'details-datetime' : 'Giovedì 23 Marzo alle ore 08:00',
+          'details-datetime' : 'Giovedì 23 Marzo 2017 alle ore 08:00',
           'details-loc' : 'Ora, BZ'
         }
       }
