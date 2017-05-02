@@ -7,7 +7,7 @@
 - aggiungere pulsante per '+ orario di fine' e fare JS che fa comparire 1 nuovo Data&Ora (un po' come gli orari dei ristoranti in web)
     
 **Attività passate**:     
-- sistemare cards, in dettagli sistemare titoli, icone, parte meteo E parte FOTO (molto importante) - *//act-past.html & past-act-details.html*       
+- togliere modifica e aggiungere la X per rimuovere, sistemare cards, in dettagli sistemare titoli, icone, parte meteo E parte FOTO (molto importante) - *//act-past.html & past-act-details.html*       
 
 **Sommario**:       
 - sistemare grandezza icone, titoli, margini - *//dashboard.html*        
