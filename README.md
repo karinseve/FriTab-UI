@@ -1,7 +1,5 @@
 # Cose da fare:
-   
-
-**SISTEMARE PULSANTE CERCA** *//tutti i file che ci sono*        
+        
 **SIDENAV**
 
 **Crea attività**:        
