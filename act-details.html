@@ -237,12 +237,16 @@
         </div>
         <div class="col s12" id="go">
           <div class="row section">
-            <div class="col s12 float-container fixed-action-btn vertical click-to-toggle">
-              <img class="responsive-img" src="https://maps.googleapis.com/maps/api/staticmap?center=46.3549874,11.4924236&zoom=16&size=600x400&maptype=roadmap&markers=color:green%7C46.3545674,11.4923236&key=AIzaSyC2ThQfNmN8yO1tuGXm91BjFOVp_BXv8MQ">
-              <a class="halfway-fab btn-floating btn-large waves-effect waves-light green pulse lighten-1" id="go-btn"><i class="material-icons">navigation</i></a>
+            <div class="col s12 absolute-action-btn-container">
+              <img class="responsive-img" src="https://maps.googleapis.com/maps/api/staticmap?center=46.3549874,11.4924236&zoom=16&size=600x400&maptype=roadmap&markers=color:green%7C46.3545674,11.4923236&key=AIzaSyC2ThQfNmN8yO1tuGXm91BjFOVp_BXv8MQ" />
+
+              <div class="fixed-action-btn absolute-action-btn vertical click-to-toggle halfway-fab">
+              <a class="btn-floating btn-large waves-effect waves-light green pulse lighten-1" id="go-btn"><i class="material-icons">navigation</i></a>
               <ul>
                 <li><a class="btn-floating pulse blue"><i class="material-icons">store</i></a></li>
               </ul>
+
+              </div>
             </div>
           </div>
         </div>

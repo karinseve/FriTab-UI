@@ -210,14 +210,22 @@ nav ul li.active.attivita a{
 	color: #FFFFFF;
 }
 
-.float-container{
+.absolute-action-btn-container {
 	position: relative;
 }
 
-#go-btn {
-	right:3em;
-	bottom:3em;
+.fixed-action-btn.absolute-action-btn {
+	position: absolute;
+}
 
+.halfway-fab {
+
+	bottom:2em;
+	right:2em;
+}
+
+.fixed-action-btn.active > #go-btn.pulse::before {
+	animation:none;
 }
 
 .date-text {
