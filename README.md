@@ -4,12 +4,6 @@
 **SISTEMARE PULSANTE CERCA** *//tutti i file che ci sono*        
 **SIDENAV**
 
-**Attività in programma**:     
-   
-- dettagli camminata in montagna: sistemare pulsante navigazione interna + tabs che non prendono i link di tutte/organizzate/suggerimenti - *//act-details.html*     
-- attività organizzate:  centratura icona nel pulsante tondo, pulsante invita + precompilazione dati nel pulsante modifica con JS - *//activities.html*      
-- suggerimenti attività: sistemare cards (come sopra) + centratura icone pulsante e stessa cosa di sopra nei dettagli - *//activities.html*   
-
 **Crea attività**:        
 - sistemare allineamento ora con l'effettivo testo - *//tutte le view (modal crea attività)*       
 - aggiungere pulsante per '+ orario di fine' e fare JS che fa comparire 1 nuovo Data&Ora (un po' come gli orari dei ristoranti in web)
