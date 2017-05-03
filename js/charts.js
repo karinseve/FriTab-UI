@@ -1,12 +1,23 @@
 
    $(function(){
+
       var w =  $(window).width()*6.5/12;
+
+      var tabs =  $('#dashboard-tabs').tabs({
+        onShow : function(t){
+          console.log(t)
+        }
+      });
+
       var data = {
         // A labels array that can contain any sort of values
         labels: ['L', 'M', 'M', 'G', 'V', 'S', 'D'],
         // Our series array that contains series objects or in this case series data arrays
-        series: [
-          [
+        series: [{
+
+          name: 'series-1',
+
+          data :[
             { meta: '0.46 34' , value: 600},
             { meta: '1.87 68' , value: 2450},
             { meta: '1.37 56' , value: 1800},
@@ -14,7 +25,20 @@
             { meta: '1.6  59' , value: 2100},
             { meta: '0.19 17' , value: 250},
             { meta: '4.64 148' , value: 6090}
-          ]
+          ]},{
+
+          name: 'series-2',
+
+          data :[
+            {  meta : '', value: 2000 },
+            {  meta : '', value: 2000 },
+            {  meta : '', value: 2000 },
+            {  meta : '', value: 2000 },
+            {  meta : '', value: 2000 },
+            {  meta : '', value: 2000 },
+            {  meta : '', value: 2000 }
+
+          ]}
         ],
       };
 
@@ -24,13 +48,17 @@
         divisor: 1000,
         high: 7000,
         low: 0,
+        showArea: true,
         chartPadding: {
             top: 20,
             right: 0,
             bottom: 30,
             left: 30
         },
-        showArea: true,
+        series : {
+        'series-2': {
+        showPoint: false
+        }},
         plugins: [
           Chartist.plugins.ctAxisTitle({
               axisX: {
@@ -63,7 +91,27 @@
         ]
 
       };
-    new Chartist.Line('.ct-chart', data, options);
+
+
+    var lineChart = new Chartist.Line('.ct-chart', data, options);
+
+    lineChart.on('draw', function(data) {
+  if(data.type === 'line' || data.type === 'area') {
+    data.element.animate({
+      d: {
+        begin: 2000 * data.index,
+        dur: 2000,
+        from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+        to: data.path.clone().stringify(),
+        easing: Chartist.Svg.Easing.easeOutQuint
+      }
+    });
+  }
+});
+
+
+
+
 
     new Chartist.Pie('.ct-chart-pie', {
       series: [20, 10, 30, 40]
