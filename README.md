@@ -1,6 +1,5 @@
 # Cose da fare:
         
-**SIDENAV**     
 - aggiungere schermata iniziale per decisione carattere in sidenav (inserimento nome?)
 
 **Crea attività**:        
