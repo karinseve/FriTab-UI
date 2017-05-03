@@ -1,6 +1,7 @@
 # Cose da fare:
         
-**SIDENAV**
+**SIDENAV**     
+- aggiungere schermata iniziale per decisione carattere in sidenav (inserimento nome?)
 
 **Crea attività**:        
 - sistemare allineamento ora con l'effettivo testo - *//tutte le view (modal crea attività)*       
@@ -10,9 +11,7 @@
 - togliere modifica e aggiungere la X per rimuovere, sistemare cards, in dettagli sistemare titoli, icone, parte meteo E parte FOTO (molto importante) - *//act-past.html & past-act-details.html*       
 
 **Sommario**:       
-- sistemare grandezza icone, titoli, margini - *//dashboard.html*        
-- parte conquiste: sistemare i 2 grafici (oltre che icona e titolo) - *//dashboard.html*       
-- parte sfide: titolo, icona, parte sfide passate - *//dashboard.html*      
+- sistemazione titoli e descrizione line chart + pie chart      
 
 **Gruppi**:      
 - dettagli amici aggiungere pulsante (?) sposta ....     
