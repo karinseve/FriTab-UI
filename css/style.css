@@ -7,6 +7,10 @@ img.sec-icon {
     margin: 20% 20% 0 0;
 }
 
+.side-nav .userView .background {
+	background-color: #80CBC4;
+}
+
 .material-icons.inline {
 	position: relative;
 	top: 0.25em;
