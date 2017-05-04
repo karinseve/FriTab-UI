@@ -50,6 +50,13 @@ img.sec-icon {
 	margin-bottom: 10px;
 }
 
+.black-links {
+	color: #000000;
+}
+
+.title-periods {
+	margin-top: 2em;
+}
 
 .search-wrap label.active {
 	display: none;

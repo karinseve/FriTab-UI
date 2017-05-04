@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FriTab</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+</head>
+
+<body>
+
+<div class="row">
+  <div class="col s6 offset-s3">
+    <div class="card">
+      <div class="card-image cyan darken-1">
+        <img src="img/door.png">
+        <span class="card-title ">Entra in FriTab</span>
+      </div>
+      <div class="card-content">
+        <form>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input placeholder="Come ti chiami?" id="name-user" type="text" class="validate">
+              <label for="titolo">Nome</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s1 input-field">
+                <p>
+                  <i class="material-icons inline">wc</i>
+                </p>
+            </div>
+            <div class="col s3 input-field">
+              <p>
+                <input class="with-gap" name="group1" value="male" type="radio" id="male"  />
+                <label for="male">Maschio</label>
+              </p>
+            </div>
+            <div class="col s3 input-field">
+              <p>
+                <input class="with-gap" name="group1" value="female"  type="radio" id="female"  />
+                <label for="female">Femmina</label>
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card-action right-align">
+      <a class="waves-effect waves-light btn cyan darken-1 white-text" id="entra" href="activities.html"><i class="material-icons right">keyboard_arrow_right</i> ENTRA</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Entra -->
+  <div id="name" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4></h4>
+      <div class="row">
+
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="" class="modal-action modal-close waves-effect waves-green btn-flat crea">Ok</a>
+    </div>
+  </div>
+  <!-- Fine modal entra -->
+
+    <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  $('#name').modal();
+
 	$(".menu-btn").sideNav();
 
   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
@@ -167,6 +169,74 @@ $(document).ready(function(){
   }
 
 
+  function createCookie(name, value, days) {
+    var expires;
+
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toGMTString();
+    } else {
+        expires = "";
+    }
+    document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/";
+  }
+
+  function readCookie(name) {
+      var nameEQ = encodeURIComponent(name) + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+      }
+      return null;
+  }
+
+  function eraseCookie(name) {
+      createCookie(name, "", -1);
+  }
+
+  var myName = readCookie('name');
+  var mySesso = readCookie('sesso');
+  console.log(myName)
+  if(myName != null  && $('#slide-out').length > 0){
+        myName = readCookie('name');
+        mySesso = readCookie('sesso');
+        $('#user-name').text(myName);
+        $('#user-email').text(myName + '@gmail.com');
+        if (mySesso === 'male'){
+          $('#user-image').attr("src", "img/man.png");
+        }
+  }
+
+
+
+
+  $('#entra').click(function(e){
+      if( myName === undefined || myName === null ){
+        e.preventDefault();
+        var name = $('#name-user').val()
+        var sesso = $("input[type=radio][name=group1]:checked" ).val()
+        console.log(name);
+        console.log(sesso);
+        createCookie('name', name, 1);
+        createCookie('sesso', sesso, 1);
+        myName = readCookie('name');
+        window.location = 'http://localhost:8000/activities.html'
+      }
+  });
+
+  $('#logout').click(function(e) {
+    console.log(myName)
+    if(myName != null &&  myName != undefined){
+      e.preventDefault();
+      eraseCookie('name');
+      eraseCookie('sesso');
+      myName=null;
+      window.location = 'http://localhost:8000/intial.html'
+    }
+  });
 
 
 });
