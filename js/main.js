@@ -129,27 +129,6 @@ $(document).ready(function(){
           'details-title' : 'Aperitivo',
           'details-datetime' : 'Venerdì 2 Giugno 2017 alle ore 18:00',
           'details-loc' : 'Piazza Duomo, Trento'
-        },
-        'id10' : {
-          'details-day' : '10',
-          'details-month' : 'APRILE',
-          'details-title' : 'Appuntamento al Cinema',
-          'details-datetime' : 'Lunedì 10 Aprile 2017 alle ore 21:00',
-          'details-loc' : 'Cinema Astra'
-        },
-        'id11' : {
-          'details-day' : '2',
-          'details-month' : 'APRILE',
-          'details-title' : 'Giro di Bassano del Grappa',
-          'details-datetime' : 'Domenica 2 Aprile 2017 alle ore 10:00',
-          'details-loc' : 'Bassano del Grappa, VI'
-        },
-        'id12' : {
-          'details-day' : '23',
-          'details-month' : 'MARZO',
-          'details-title' : 'Biciclettata',
-          'details-datetime' : 'Giovedì 23 Marzo 2017 alle ore 08:00',
-          'details-loc' : 'Ora, BZ'
         }
       }
 
@@ -165,7 +144,44 @@ $(document).ready(function(){
         }
 
       }
+  }
 
+  if(window.location.pathname === "/past-act-details.html"){
+    var actDetailsData = {
+      'id10' : {
+          'past-details-day' : '10',
+          'past-details-month' : 'APRILE',
+          'past-details-title' : 'Appuntamento al Cinema',
+          'past-details-datetime' : 'Lunedì 10 Aprile 2017 alle ore 21:00',
+          'past-details-loc' : 'Cinema Astra'
+        },
+        'id11' : {
+          'past-details-day' : '2',
+          'past-details-month' : 'APRILE',
+          'past-details-title' : 'Giro di Bassano del Grappa',
+          'past-details-datetime' : 'Domenica 2 Aprile 2017 alle ore 10:00',
+          'past-details-loc' : 'Bassano del Grappa, VI'
+        },
+        'id12' : {
+          'past-details-day' : '23',
+          'past-details-month' : 'MARZO',
+          'past-details-title' : 'Biciclettata',
+          'past-details-datetime' : 'Giovedì 23 Marzo 2017 alle ore 08:00',
+          'past-details-loc' : 'Ora, BZ'
+        }
+    }
+    if(window.location.hash) {
+        // Fragment exists
+        console.log(window.location.hash)
+        var id = window.location.hash.substring(1)
+
+        var pageData = actDetailsData[id]
+        console.log(pageData)
+        for (var property in pageData) {
+              $('#'+property).html(pageData[property]);
+        }
+
+      }
   }
 
 
