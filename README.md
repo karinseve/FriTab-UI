@@ -6,7 +6,7 @@
 - aggiungere pulsante per '+ orario di fine' e fare JS che fa comparire 1 nuovo Data&Ora (un po' come gli orari dei ristoranti in web)
     
 **Attività passate**:     
-- in dettagli sistemare titoli, icone, parte meteo E parte FOTO (molto importante) - *//act-past.html & past-act-details.html*       
+- in dettagli sistemare parte FOTO (molto importante) - *past-act-details.html*       
 
 **Sommario**:       
 - sistemazione titoli e descrizione line chart + pie chart      
