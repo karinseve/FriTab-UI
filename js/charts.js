@@ -45,9 +45,7 @@
       var options = {
         height: w*(3/4),
         width: w*(3/4),
-        divisor: 1000,
-        high: 7000,
-        low: 0,
+
         showArea: true,
         chartPadding: {
             top: 20,
@@ -59,6 +57,13 @@
         'series-2': {
         showPoint: false
         }},
+        axisY: {
+          type: Chartist.FixedScaleAxis,
+          onlyInteger: true,
+          divisor: 14,
+          high: 7000,
+          low: 0,
+        },
         plugins: [
           Chartist.plugins.ctAxisTitle({
               axisX: {
@@ -88,12 +93,67 @@
                 return text;
             }
           })
+
+
         ]
 
       };
 
 
     var lineChart = new Chartist.Line('.ct-chart', data, options);
+
+lineChart.on('draw', function(data) {
+  // If the draw event was triggered from drawing a point on the line chart
+  if(data.type === 'point') {
+    // We are creating a new path SVG element that draws a triangle around the point coordinates
+
+
+    if(data.value.y >= 2000){
+      console.log(data.element)
+
+    var triangle = new Chartist.Svg('path', {
+      d: ['M',
+        data.x,
+        data.y - 6,
+        'L',
+        data.x - 6,
+        data.y + 3,
+        'L',
+        data.x + 6,
+        data.y + 3,
+        'z'].join(' '),
+      style: 'fill-opacity: 1'
+    }, 'ct-area');
+    data.element.replace(triangle);
+
+      data.element.addClass('above')
+    } else {
+
+    var triangledown = new Chartist.Svg('path', {
+      d: ['M',
+        data.x,
+        data.y + 2,
+        'L',
+        data.x + 2,
+        data.y - 1,
+        'L',
+        data.x - 2,
+        data.y - 1,
+        'z'].join(' '),
+      style: 'fill-opacity: 1'
+    }, 'ct-point');
+    data.element.replace(triangledown);
+
+      data.element.addClass('under')
+    }
+
+    // With data.element we get the Chartist SVG wrapper and we can replace the original point drawn by Chartist with our newly created triangle
+
+
+}
+
+
+  });
 
     lineChart.on('draw', function(data) {
   if(data.type === 'line' || data.type === 'area') {
@@ -114,7 +174,17 @@
 
 
     new Chartist.Pie('.ct-chart-pie', {
-      series: [3400, 1800]
+      series: [{
+        value:3400,
+        name: 'Passi oggi',
+        className: 'ct-a',
+        meta: 'Oggi'
+    }, {
+        value:1800,
+        name: 'Media settimana',
+        className: 'ct-b',
+        meta: 'Medi'
+        }]
     }, {
 
       height: w/2,
