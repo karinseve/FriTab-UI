@@ -254,5 +254,31 @@ $(document).ready(function(){
     }
   });
 
+  var mySteps=document.getElementById("daily-steps").innerText;
+  var myKm=document.getElementById("daily-km").innerText;
+  var myMin=document.getElementById("daily-min").innerText;
+  $('#edit-dashboard').modal({
+    ready: function(modal, trigger) {
+      console.log('cccc');
+      console.log(mySteps);
+      if (mySteps!=null || myKm!=null || myMin!=null) {
+        console.log(mySteps);
+        document.getElementById('steps').value=mySteps
+        document.getElementById('km').value=myKm
+        document.getElementById('active-hours').value=myMin
+      }
+    }
+  });
+  // on("show", function(e) {
+  //   console.log('cccc');
+  //   if (mySteps!=null || myKm!=null || myMin!=null) {
+  //     e.preventDefault();
+  //     $('#steps').text(mySteps);
+  //     $('#km').text(myKm);
+  //     $('#active-hours').text(myMin);
+  //     //window.location = 'http://localhost:8000/dashboard.html'
+  //   }
+  // });
+
 
 });
