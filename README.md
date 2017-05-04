@@ -8,7 +8,8 @@
 **Attività passate**:     
 - cancellazione attivittà con la X + in dettagli sistemare parte FOTO (molto importante) - *past-act-details.html*       
 
-**Sommario**:       
+**Sommario**:  
+- modifica obiettivi precompilato     
 - sistemazione titoli e descrizione line chart + pie chart      
 
 **Gruppi**:      
