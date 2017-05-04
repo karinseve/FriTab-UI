@@ -315,6 +315,18 @@ nav ul li.active.attivita a{
   stroke-dasharray: 5px 5px;
 }
 
+.ct-chart-pie .ct-label {
+	fill: #37474F;
+	font-size: 1.25rem;
+}
+
+.ct-chart-pie .ct-series-a .ct-slice-donut-solid {
+	fill: #691A99;
+}
+
+.ct-chart-pie .ct-series-b .ct-slice-donut-solid {
+	fill: #68EFAD;
+}
 
 /* ----------------------------------------- */
 @-webkit-keyframes dashoffset {

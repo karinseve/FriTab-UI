@@ -44,7 +44,7 @@
 
       var options = {
         height: w*(3/4),
-        width: w,
+        width: w*(3/4),
         divisor: 1000,
         high: 7000,
         low: 0,
@@ -114,13 +114,13 @@
 
 
     new Chartist.Pie('.ct-chart-pie', {
-      series: [20, 10, 30, 40]
+      series: [3400, 1800]
     }, {
-              height: w*(3/4),
-        width: w,
 
+      height: w/2,
+      width: w/2,
       donut: true,
-      donutWidth: 80,
+      donutWidth: 50,
       donutSolid: true,
       startAngle: 240,
       showLabel: true
