@@ -123,28 +123,26 @@ lineChart.on('draw', function(data) {
         data.y + 3,
         'z'].join(' '),
       style: 'fill-opacity: 1'
-    }, 'ct-area');
+    }, 'ct-area above');
     data.element.replace(triangle);
 
-      data.element.addClass('above')
+
     } else {
 
     var triangledown = new Chartist.Svg('path', {
       d: ['M',
         data.x,
-        data.y + 2,
+        data.y + 6,
         'L',
-        data.x + 2,
-        data.y - 1,
+        data.x + 6,
+        data.y - 3,
         'L',
-        data.x - 2,
-        data.y - 1,
+        data.x - 6,
+        data.y - 3,
         'z'].join(' '),
       style: 'fill-opacity: 1'
-    }, 'ct-point');
+    }, 'ct-area under');
     data.element.replace(triangledown);
-
-      data.element.addClass('under')
     }
 
     // With data.element we get the Chartist SVG wrapper and we can replace the original point drawn by Chartist with our newly created triangle
