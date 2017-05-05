@@ -21,7 +21,7 @@
 
 </head>
 
-<body>
+<body id="dashboard-page">
 
 
   <!--Side Nav-->
@@ -79,7 +79,7 @@
             <form>
               <div class="input-field search-wrap z-depth-1">
                 <i class="material-icons prefix ">search</i>
-                <input type="text" id="search" class="autocomplete" />
+                <input type="text" id="search" class="autocomplete" value="" />
                 <label for="search" class="">Cerca attività</label>
               </div>
            </form>
@@ -330,20 +330,20 @@
         <form class="col s12">
           <div class="row">
             <div class="input-field col s12">
-              <input id="steps" type="number" class="validate">
-              <label for="steps">Passi/giorno</label>
+              <input id="steps" type="number" class="validate" value="" />
+              <label for="steps" class="active" id="ssssss">Passi/giorno</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="km" type="number" class="validate">
-              <label for="km">Chilometri/giorno</label>
+              <input id="km" type="number" class="validate" value="" />
+              <label for="km" class="active">Chilometri/giorno</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="active-hours" type="number" class="validate">
-              <label for="active-hours">Ore di movimento/giorno</label>
+              <input id="active-hours" type="number" class="validate" value="" />
+              <label for="active-hours" class="active">Ore di movimento/giorno</label>
             </div>
           </div>
         </form>
@@ -360,11 +360,11 @@
   <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
 
+  <script type="text/javascript" src="js/materialize.min.js"></script>
   <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
   <script src="js/chartist-plugin-axistitle.min.js"></script>
   <script src="js/chartist-plugin-tooltip.min.js" ></script>
-  <script src="js/chartist-plugin-threshold.min.js" ></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="js/chartist-plugin-threshold.js" ></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
   <script src="js/charts.js"></script>

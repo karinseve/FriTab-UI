@@ -68,7 +68,22 @@ $(document).ready(function(){
     minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
   });
 
-  $('.next').slider('next');
+  if($('.slider').length > 0){
+
+    $('.slider').slider();
+
+    $('.next').click(function(e){
+      e.preventDefault();
+      $('.slider').slider('next');
+    })
+    $('.prev').click(function(e){
+      e.preventDefault();
+      $('.slider').slider('prev');
+    })
+
+
+  }
+
 
 
   if(window.location.pathname === "/act-details.html"){
@@ -254,21 +269,25 @@ $(document).ready(function(){
     }
   });
 
-  var mySteps=document.getElementById("daily-steps").innerText;
-  var myKm=document.getElementById("daily-km").innerText;
-  var myMin=document.getElementById("daily-min").innerText;
+  if($('#dashboard-page').length > 0){
+  var mySteps=$("#daily-steps").text();
+  var myKm=$("#daily-km").text();
+  var myMin=$("#daily-min").text();
   $('#edit-dashboard').modal({
     ready: function(modal, trigger) {
       console.log('cccc');
       console.log(mySteps);
       if (mySteps!=null || myKm!=null || myMin!=null) {
         console.log(mySteps);
-        document.getElementById('steps').value=mySteps
-        document.getElementById('km').value=myKm
-        document.getElementById('active-hours').value=myMin
+        $('#steps').val(mySteps)
+        $('#km').val(myKm)
+        $('#active-hours').val(myMin)
       }
+          Materialize.updateTextFields();
     }
   });
+  }
+
   // on("show", function(e) {
   //   console.log('cccc');
   //   if (mySteps!=null || myKm!=null || myMin!=null) {
@@ -281,4 +300,19 @@ $(document).ready(function(){
   // });
 
 
+  $('#add-fine').click(function(e){
+      e.preventDefault();
+      console.log('aa')
+      $('#row-fine').fadeIn();
+  })
+
+  $('#remove-fine').click(function(e){
+      e.preventDefault();
+      console.log('aa')
+      $('#row-fine').fadeOut();
+  })
+
+
+
 });
+
