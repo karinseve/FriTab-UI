@@ -15,7 +15,7 @@
   <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
 </head>
 
-<body>
+<body id="groups-page">
 
 
   <!--Side Nav-->
@@ -32,6 +32,7 @@
     <li><a href="#!"><i class="material-icons">person</i>Profilo</a></li>
     <li><a href="#!"><span class="new badge">4</span><i class="material-icons">notifications</i>Notifiche</a></li>
     <li><a href="#!"><span class="new badge">1</span><i class="material-icons">chat</i>Messaggi</a></li>
+    <li><a href="intial.html" id="logout"><i class="material-icons">exit_to_app</i>Esci</a></li>
     <li><div class="divider"></div></li>
     <li><a class="subheader">Gruppi</a></li>
     <li><a class="waves-effect" href="groups.html">Familiari</a></li>
@@ -247,9 +248,9 @@
           <ul class="collection">
             <li class="collection-item avatar">
               <img src="img/film-reel.png" alt="" class="circle">
-              <span class="title" style="font-weight: bold;">Film in bianco e nero</span>
+              <span class="title" style="font-weight: bold;" id="gdet-title">Film in bianco e nero</span>
               <a href="#edit-group" class="btn-floating btn-small waves-effect waves-light light-blue darken-3"><i class="material-icons">edit</i></a><br/>
-              <p>Se ti piacciono i film in bianco e nero, questo è il gruppo che fa per te, unisciti a noi! Film in bianco e nero tutti i martedì, guarda i nostri eventi per sapere dove sarà il prossimo!</p>
+              <p id="gdet-descr">Se ti piacciono i film in bianco e nero, questo è il gruppo che fa per te, unisciti a noi! Film in bianco e nero tutti i martedì, guarda i nostri eventi per sapere dove sarà il prossimo!</p>
               <p><span class="date-text">Membri: 6</span></p><br />
               <div class="chip">
                 <img src="img/girl.png" alt="Contact Person">
@@ -660,11 +661,11 @@
         <form class="col s12">
           <div class="row">
             <div class="input-field col s12">
-              <input placeholder="Aggiungi un nome breve e chiaro" id="titolo" type="text" class="validate">
+              <input placeholder="Aggiungi un nome breve e chiaro" id="group-title" type="text" class="validate">
               <label for="titolo">Nome del gruppo</label>
             </div>
             <div class="input-field col s12">
-              <textarea placeholder="Spiega meglio il gruppo alle persone" id="descrizione" type="text" class="materialize-textarea"></textarea>
+              <textarea placeholder="Spiega meglio il gruppo alle persone" id="group-descr" type="text" class="materialize-textarea"></textarea>
               <label for="icon_telephone">Descrizione</label>
             </div>
             <div class="input-field col s12">

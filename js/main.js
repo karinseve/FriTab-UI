@@ -91,16 +91,16 @@ $(document).ready(function(){
       var actDetailsData = {
         'id2' : {
           'details-day' : '23',
-          'details-month' : 'APRILE',
+          'details-month' : 'MAGGIO',
           'details-title' : 'Film Titanic',
-          'details-datetime' : 'Domenica 23 Aprile 2017 alle ore 20:30',
+          'details-datetime' : 'Domenica 23 Maggio 2017 alle ore 20:30',
           'details-loc' : 'Argentario di Cognola'
         },
         'id3' : {
           'details-day' : '29',
-          'details-month' : 'APRILE',
+          'details-month' : 'MAGGIO',
           'details-title' : 'Giro del Lago',
-          'details-datetime' : 'Sabato 29 Aprile 2017 alle ore 14:30',
+          'details-datetime' : 'Lunedì 29 Maggio 2017 alle ore 14:30',
           'details-loc' : 'Lago di Levico'
         },
         'id4' : {
@@ -283,22 +283,10 @@ $(document).ready(function(){
         $('#km').val(myKm)
         $('#active-hours').val(myMin)
       }
-          Materialize.updateTextFields();
+      Materialize.updateTextFields();
     }
   });
   }
-
-  // on("show", function(e) {
-  //   console.log('cccc');
-  //   if (mySteps!=null || myKm!=null || myMin!=null) {
-  //     e.preventDefault();
-  //     $('#steps').text(mySteps);
-  //     $('#km').text(myKm);
-  //     $('#active-hours').text(myMin);
-  //     //window.location = 'http://localhost:8000/dashboard.html'
-  //   }
-  // });
-
 
   $('#add-fine').click(function(e){
       e.preventDefault();
@@ -312,7 +300,20 @@ $(document).ready(function(){
       $('#row-fine').fadeOut();
   })
 
-
+  if($('#groups-page').length>0){
+    var group_title=$("#gdet-title").text();
+    var group_descr=$("#gdet-descr").text();
+    console.log(group_title);
+    $('#edit-group').modal({
+      ready: function(modal, trigger) {
+        if (group_title != null || group_descr != null) {
+          $('#group-title').val(group_title);
+          $('#group-descr').val(group_descr);
+        }
+        Materialize.updateTextFields();
+      }
+    });
+  }
 
 });
 
