@@ -91,7 +91,7 @@
             <li class="collection-item avatar">
               <img src="img/grandparents.png" alt="" class="circle">
               <span class="title">Familiari  </span>
-              <a class="btn-floating btn-small waves-effect waves-light green lighten-3"><i class="material-icons black-text">add</i></a>
+              <a class="btn-floating btn-small waves-effect waves-light green lighten-3" href="#add-person"><i class="material-icons black-text">add</i></a>
               <p><span class="date-text">Membri: 4</span></p><br />
               <a href="#person-det">
                 <div class="chip">
@@ -124,7 +124,7 @@
             <li class="collection-item avatar">
               <img src="img/transfer.png" alt="" class="circle">
               <span class="title">Amici più stretti</span>
-              <a class="btn-floating btn-small waves-effect waves-light green lighten-3"><i class="material-icons black-text">add</i></a>
+              <a class="btn-floating btn-small waves-effect waves-light green lighten-3" href="#add-person"><i class="material-icons black-text">add</i></a>
               <p><span class="date-text">Membri: 2</span></p><br />
               <a href="#person-det">
                 <div class="chip">
@@ -145,7 +145,7 @@
             <li class="collection-item avatar">
               <img src="img/network.png" alt="" class="circle">
               <span class="title">Conoscenti </span>
-              <a class="btn-floating btn-small waves-effect waves-light green lighten-3"><i class="material-icons black-text">add</i></a>
+              <a class="btn-floating btn-small waves-effect waves-light green lighten-3" href="#add-person"><i class="material-icons black-text">add</i></a>
               <p><span class="date-text">Membri: 5</span></p><br />
               <a href="#person-det">
                 <div class="chip">
@@ -183,7 +183,7 @@
             <li class="collection-item avatar">
               <img src="img/surgeon.png" alt="" class="circle">
               <span class="title">Professionisti</span>
-              <a class="btn-floating btn-small waves-effect waves-light green lighten-3"><i class="material-icons black-text">add</i></a>
+              <a class="btn-floating btn-small waves-effect waves-light green lighten-3" href="#add-person"><i class="material-icons black-text">add</i></a>
               <p><span class="date-text">Membri: 1</span></p><br />
               <a href="#person-det">
                 <div class="chip">
@@ -207,7 +207,7 @@
               <form>
                 <div class="input-field search-wrap z-depth-1">
                   <i class="material-icons prefix ">search</i>
-                  <input type="text" id="search-group" class="autocomplete" />
+                  <input type="text" id="search-group" class="autocomplete groups-autocomplete" />
                   <label for="search-group" class="">Cerca gruppo</label>
                 </div>
              </form>
@@ -224,7 +224,7 @@
             <li class="collection-item avatar">
               <img src="img/sneakers.png" alt="" class="circle">
               <span class="title" style="font-weight: bold;">Passeggiate all'aperto</span>
-              <a class="btn-floating btn-small waves-effect waves-light red darken-4"><i class="material-icons">close</i></a><br/>
+              <a class="btn-floating btn-small waves-effect waves-light red darken-4 collection-closer"><i class="material-icons">close</i></a><br/>
               <p>Questo gruppo è fatto apposta per chi adora camminare all'aperto, sia in montagna che in città!</p>
               <p><span class="date-text">Membri: 4</span></p><br />
               <div class="chip">
@@ -374,6 +374,7 @@
                   </div>
                 </div>
               </div>
+              <a class="waves-effect waves-light btn btn-smallmargin blue-grey lighten-2 person-card-closer" href="#"><i class="material-icons white-text">visibility_off</i></a>
               <a href="#!" class="secondary-content"><i class="material-icons">person_add</i></a>
             </li>
           </ul>
@@ -407,6 +408,7 @@
                   </div>
                 </div>
               </div>
+              <a class="waves-effect waves-light btn btn-smallmargin blue-grey lighten-2 person-card-closer" href="#"><i class="material-icons white-text">visibility_off</i></a>
               <a href="#!" class="secondary-content"><i class="material-icons">person_add</i></a>
             </li>
           </ul>
@@ -443,6 +445,7 @@
                   </div>
                 </div>
               </div>
+              <a class="waves-effect waves-light btn btn-smallmargin blue-grey lighten-2 collection-closer" href="#"><i class="material-icons white-text">visibility_off</i></a>
               <a href="#!" class="secondary-content"><i class="material-icons">group_add</i></a>
             </li>
           </ul>
@@ -711,7 +714,54 @@
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Annulla</a>
     </div>
   <!-- Fine edit gruppo modal -->
-</div>
+  </div>
+
+  <!-- Aggiungi persone modal -->
+  <div id="add-person" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Aggiungi membri</h4>
+      <div class="row">
+        <div class="input-field col s12">
+          <div class="chips chips-autocomplete">
+
+          </div>
+          <div class="chip add-friend">
+            <img src="img/girl.png" alt="Contact Person">
+            Angela
+          </div>
+          <div class="chip add-friend">
+            <img src="img/man.png" alt="Contact Person">
+            Riccardo
+          </div>
+          <div class="chip add-friend">
+            <img src="img/girl-4.png" alt="Contact Person">
+            Elisa
+          </div>
+          <div class="chip add-friend">
+            <img src="img/boy.png" alt="Contact Person">
+            Mario
+          </div>
+          <div class="chip add-friend">
+            <img src="img/girl.png" alt="Contact Person">
+            Valentina
+          </div>
+          <div class="chip add-friend">
+            <img src="img/girl.png" alt="Contact Person">
+            Antonia
+          </div>
+          <div class="chip add-friend">
+            <img src="img/girl-3.png" alt="Contact Person">
+            Elena
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat crea">Invita</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat annulla">Annulla</a>
+    </div>
+  </div>
+  <!-- Fine aggiungi persone modal -->
 
 
   <!--Import jQuery before materialize.js-->

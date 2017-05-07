@@ -243,17 +243,36 @@
               <input placeholder="Includi un luogo o un indirizzo" id="luogo" type="text" class="validate">
               <label for="luogo">Luogo</label>
             </div>
+            <div class="row">
             <div class="input-field col s4">
               <input id="data" type="date" class="datepicker">
-              <label for="data">Data</label>
+              <label for="data" class="active">Data</label>
             </div>
             <div class="input-field col s4">
-              <input  id="ora" type="time" class="validate">
-              <label for="ora">Ora</label>
+              <input  id="ora" type="time" class="validate" placeholder="9:00" value="" />
+              <label for="ora" class="active">Ora</label>
             </div>
             <div class="col s4">
-              <p href="#">+ Orario di fine</p>
+              <p>
+              <a href="#" id="add-fine">+ Orario di fine</a>
+              </p>
             </div>
+          </div>
+          <div class="row" id="row-fine" style="display: none">
+            <div class="input-field col s4">
+              <input id="data" type="date" class="datepicker">
+              <label for="data" class="active">Data</label>
+            </div>
+            <div class="input-field col s4">
+              <input  id="ora" type="time" class="validate" placeholder="9:00" value="" />
+              <label for="ora" class="active">Ora</label>
+            </div>
+            <div class="col s4">
+              <p>
+              <a href="#" id="remove-fine">- Orario di fine</a>
+              </p>
+            </div>
+          </div>
             <div class="input-field col s12">
               <select>
                 <option value="" disabled selected>Aggiungi una notifica</option>

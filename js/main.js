@@ -8,12 +8,6 @@ $(document).ready(function(){
 
   $('#rate-act').modal();
 
-  $('#chall-create').modal();
-
-  $('#crea-gruppo').modal();
-
-  $('#edit-group').modal();
-
   $('#person-det').modal();
 
   $('#edit-dashboard').modal();
@@ -86,6 +80,7 @@ $(document).ready(function(){
     }
   })
 
+
   $('#invite-friends').modal ({
     ready:function(modal, trigger){
       $('.chips-autocomplete').material_chip({
@@ -134,6 +129,30 @@ $(document).ready(function(){
     }
   })
 
+  $('#chall-create').modal({
+    ready:function(modal, trigger){
+      $('.chips-autocomplete').material_chip({
+        autocompleteOptions: {
+          data: peopleData,
+          limit: Infinity,
+          minLength: 1
+        }
+      });
+    }
+  })
+
+  $('#add-person').modal({
+    ready:function(modal, trigger){
+      $('.chips-autocomplete').material_chip({
+        autocompleteOptions: {
+          data: peopleData,
+          limit: Infinity,
+          minLength: 1
+        }
+      });
+    }
+  })
+
   $('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month
     selectYears: 3 // Creates a dropdown of 15 years to control year
@@ -158,6 +177,21 @@ $(document).ready(function(){
     minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
   });
 
+
+  $('input.autocomplete.groups-autocomplete').autocomplete({
+    data: {
+      "Camminate in montagna": null,
+      "Nati nel 1950": null,
+      "Gruppo di Trento": null,
+      "Amici del liceo": null,
+      "Bocce che passione": null
+    },
+    limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+    onAutocomplete: function(val) {
+      // Callback function when value is autcompleted.
+    },
+    minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
+  })
 
 
 
@@ -417,6 +451,26 @@ var actDetailsData = {
     console.log(group_title);
     $('#edit-group').modal({
       ready: function(modal, trigger) {
+        $('.chips-autocomplete').material_chip({
+          data: [{
+            tag:'Angela', image :  'img/girl.png'
+          },{
+            tag: 'Alessia', image : 'img/girl-2.png'
+          },{
+            tag: 'Marco', image: 'img/boy.png'
+          }, {
+            tag: 'Arturo', image: 'img/man.png'
+          }, {
+            tag: 'Maria', image: 'img/girl-3.png'
+          }, {
+            tag: 'Annamaria', image: 'img/girl-4.png'
+          }],
+          autocompleteOptions: {
+            data: peopleData,
+            limit: Infinity,
+            minLength: 1
+          }
+        });
         if (group_title != null || group_descr != null) {
           $('#group-title').val(group_title);
           $('#group-descr').val(group_descr);
@@ -435,6 +489,14 @@ var actDetailsData = {
 
     $('#modifica').modal({
       ready: function(modal, trigger) {
+
+        $('.chips-autocomplete').material_chip({
+        autocompleteOptions: {
+          data: peopleData,
+          limit: Infinity,
+          minLength: 1
+        }
+      });
 
 
         var ida = $('#modifica').data('act-id');
@@ -468,6 +530,18 @@ var actDetailsData = {
     e.preventDefault();
     $(this).closest('.card').fadeOut();
     Materialize.toast('L\'attività è stata rimossa', 3000, 'rounded')
+  });
+
+  $('.collection-closer').click(function(e) {
+    e.preventDefault();
+    $(this).closest('.collection').fadeOut();
+    Materialize.toast('Il gruppo è stato rimosso', 3000, 'rounded')
+  });
+
+  $('.person-card-closer').click(function(e) {
+    e.preventDefault();
+    $(this).closest('.collection').fadeOut();
+    Materialize.toast('La persona è stata rimossa', 3000, 'rounded')
   });
 });
 
