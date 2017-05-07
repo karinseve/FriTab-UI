@@ -10,8 +10,6 @@ $(document).ready(function(){
 
   $('#chall-create').modal();
 
-  $('#invite-group').modal();
-
   $('#crea-gruppo').modal();
 
   $('#edit-group').modal();
@@ -44,6 +42,30 @@ $(document).ready(function(){
     },
     'Valentina': {
       tag:'Valentina',  image: 'img/girl-2.png'
+    }
+  }
+
+  var groupData = {
+    'Familiari' : {
+      tag: 'Familiari', image: 'img/grandparents.png'
+    },
+    'Amici più stretti': {
+      tag: 'Amici più stretti', image: 'img/transfer.png'
+    },
+    'Conoscenti': {
+      tag: 'Conoscenti', image: 'img/network.png'
+    },
+    'Professionisti': {
+      tag: 'Professionisti', image: 'img/surgeon.png'
+    },
+    'Passeggiate all\'aperto': {
+      tag: 'Passeggiate all\'aperto', image: 'img/sneakers.png'
+    },
+    'Film in bianco e nero': {
+      tag: 'Film in bianco e nero', image: 'img/film-reel.png'
+    },
+    'Funghi che passione': {
+      tag: 'Funghi che passione', image: 'img/mushrooms.png'
     }
   }
 
@@ -81,6 +103,18 @@ $(document).ready(function(){
       $('.chips-autocomplete').material_chip({
         autocompleteOptions: {
           data: peopleData,
+          limit: Infinity,
+          minLength: 1
+        }
+      });
+    }
+  })
+
+  $('#invite-group').modal({
+    ready:function(modal, trigger){
+      $('.chips-autocomplete').material_chip({
+        autocompleteOptions: {
+          data: groupData,
           limit: Infinity,
           minLength: 1
         }
