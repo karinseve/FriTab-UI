@@ -452,5 +452,10 @@ var actDetailsData = {
     })
   }
 
+  $('.card-closer').click(function(e) {
+    e.preventDefault();
+    $(this).closest('.card').fadeOut();
+    Materialize.toast('L\'attività è stata rimossa', 3000, 'rounded')
+  });
 });
 
