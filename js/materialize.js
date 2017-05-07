@@ -3355,7 +3355,18 @@ if (jQuery) {
 
                     var autocompleteOption = $('<li></li>');
                     if (!!data[key]) {
-                      autocompleteOption.append('<img src="'+ data[key] +'" class="right circle"><span>'+ key +'</span>');
+                      var tag = key;
+                      var image = data[key];
+                      if(!!data[key]['tag']){
+                      	 tag =	data[key]['tag']
+                      }
+                      if(!!data[key]['image']){
+                      	image =	data[key]['image']
+                      }
+
+
+                      autocompleteOption.append('<img src="'+ image +'" class="right circle"><span>'+ tag +'</span>');
+
                     } else {
                       autocompleteOption.append('<span>'+ key +'</span>');
                     }
@@ -4153,6 +4164,7 @@ if (jQuery) {
           curr_options.data = [];
         }
         $chips.data('chips', curr_options.data);
+        $chips.data('autocomplete', curr_options.autocompleteOptions.data);
         $chips.attr('data-index', i);
         $chips.attr('data-initialized', true);
 
@@ -4273,6 +4285,7 @@ if (jQuery) {
             return;
           }
 
+
           e.preventDefault();
           self.addChip({tag: $target.val()}, $chips);
           $target.val('');
@@ -4338,7 +4351,11 @@ if (jQuery) {
       if (!elem.tag) return;
 
       var $renderedChip = $('<div class="chip"></div>');
-      $renderedChip.text(elem.tag);
+      if(elem.image){
+      	console.log(elem.image);
+      	$renderedChip.append($('<img src="'+elem.image+'" />'));
+      }
+      $renderedChip.append(elem.tag);
       $renderedChip.append($('<i class="material-icons close">close</i>'));
       return $renderedChip;
     };
@@ -4354,31 +4371,43 @@ if (jQuery) {
 
     this.isValid = function($chips, elem) {
       var chips = $chips.data('chips');
-      var exists = false;
+      var valid = true;
       for (var i=0; i < chips.length; i++) {
-        if (chips[i].tag === elem.tag) {
-            exists = true;
-            return;
+        if (chips[i].tag == elem.tag) {
+            valid = false;
+            return valid;
         }
       }
-      return '' !== elem.tag && !exists;
+      return '' !== elem.tag && valid;
     };
 
     this.addChip = function(elem, $chips) {
       if (!self.isValid($chips, elem)) {
         return;
       }
-      var $renderedChip = self.renderChip(elem);
+
+      var chips = $chips.data('autocomplete');
+
+      var curr  = {};
+      for (var i in chips) {
+        if (chips[i].tag == elem.tag) {
+            curr = chips[i]
+            break;
+        }
+      }
+      console.log(curr)
+
+      var $renderedChip = self.renderChip(curr);
       var newData = [];
       var oldData = $chips.data('chips');
       for (var i = 0; i < oldData.length; i++) {
         newData.push(oldData[i]);
       }
-      newData.push(elem);
+      newData.push(curr);
 
       $chips.data('chips', newData);
       $renderedChip.insertBefore($chips.find('input'));
-      $chips.trigger('chip.add', elem);
+      $chips.trigger('chip.add', curr);
       self.setPlaceholder($chips);
     };
 
@@ -4403,7 +4432,7 @@ if (jQuery) {
       var $chip = $chips.find('.chip').eq(chipIndex);
       if ($chip && false === $chip.hasClass('selected')) {
         $chip.addClass('selected');
-        $chips.trigger('chip.select', $chips.data('chips')[chipIndex]);
+        //$chips.trigger('chip.select', $chips.data('chips')[chipIndex]);
       }
     };
 

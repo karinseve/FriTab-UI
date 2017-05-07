@@ -5,11 +5,12 @@ $(document).ready(function(){
 	$(".menu-btn").sideNav();
 
   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-  $('#crea-att').modal();
 
   $('#rate-act').modal();
 
-  $('#modifica').modal();
+  $('#chall-create').modal();
+
+  $('#invite-group').modal();
 
   $('#crea-gruppo').modal();
 
@@ -19,30 +20,73 @@ $(document).ready(function(){
 
   $('#edit-dashboard').modal();
 
+  var  peopleData = {
+    'Angela': {
+      tag:'Angela', image :  'img/girl.png'
+    },
+    'Mario': {
+      tag: 'Mario', image: 'img/man.png'
+    },
+    'Elena': {
+      tag: 'Elena', image: 'img/girl-2.png'
+    },
+    'Martino': {
+      tag: 'Martino', image: 'img/boy.png'
+    },
+    'Alessandro': {
+      tag: 'Alessandro', image: 'img/man.png'
+    },
+    'Antonia': {
+      tag: 'Antonia', image: 'img/girl-3.png'
+    },
+    'Elisa': {
+      tag: 'Elisa', image: 'img/girl.png'
+    },
+    'Valentina': {
+      tag:'Valentina',  image: 'img/girl-2.png'
+    }
+  }
+
   $('#crea-lista').modal({
     ready : function(modal, trigger){
 
       $('.chips-autocomplete').material_chip({
+          data: [{
+            tag:'Angela', image :  'img/girl.png'
+          }],
+
         autocompleteOptions: {
-          data: {
-           'Angela':  'img/girl.png',
-           'Mario': 'img/man.png',
-           'Elena': 'img/girl-2.png',
-           'Martino': 'img/boy.png',
-           'Alessandro': 'img/man.png',
-           'Antonia': 'img/girl-3.png',
-           'Elisa': 'img/girl.png',
-           'Valentina': 'img/girl-2.png'
-          },
+          data: peopleData,
           limit: Infinity,
           minLength: 1
         }
       });
-
-
     }
   })
 
+  $('#invite-friends').modal ({
+    ready:function(modal, trigger){
+      $('.chips-autocomplete').material_chip({
+        autocompleteOptions: {
+          data: peopleData,
+          limit: Infinity,
+          minLength: 1
+        }
+      });
+    }
+  })
+
+  $('#crea-att').modal({
+    ready:function(modal, trigger){
+      $('.chips-autocomplete').material_chip({
+        autocompleteOptions: {
+          data: peopleData,
+          limit: Infinity,
+          minLength: 1
+        }
+      });
+    }
+  })
 
   $('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month
@@ -51,7 +95,7 @@ $(document).ready(function(){
 
   $('select').material_select();
 
-  $('input.autocomplete').autocomplete({
+  $('input.autocomplete.activities-autocomplete').autocomplete({
     data: {
       "Giro del lago di Garda": null,
       "Golf": null,
@@ -67,6 +111,9 @@ $(document).ready(function(){
     },
     minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
   });
+
+
+
 
   if($('.slider').length > 0){
 
@@ -84,11 +131,7 @@ $(document).ready(function(){
 
   }
 
-
-
-  if(window.location.pathname === "/act-details.html"){
-
-      var actDetailsData = {
+var actDetailsData = {
         'id2' : {
           'details-day' : '23',
           'details-month' : 'MAGGIO',
@@ -108,6 +151,8 @@ $(document).ready(function(){
           'details-month' : 'MAGGIO',
           'details-title' : 'Appuntamento al Cinema',
           'details-datetime' : 'Mercoledì 10 Maggio 2017 alle ore 21:00',
+          'details-date': 'Mercoledì 10 Maggio 2017',
+          'details-time': '21:00',
           'details-loc' : 'Cinema Astra'
         },
         'id5' : {
@@ -115,6 +160,8 @@ $(document).ready(function(){
           'details-month' : 'MAGGIO',
           'details-title' : 'Visita al castello di Soave',
           'details-datetime' : 'Martedì 16 Maggio 2017 alle ore 11:15',
+          'details-date': 'Martedì 16 Maggio 2017',
+          'details-time': '11:15',
           'details-loc' : 'Soave, VR'
         },
         'id6' : {
@@ -122,6 +169,8 @@ $(document).ready(function(){
           'details-month' : 'GIUGNO',
           'details-title' : 'Visita parco Natura Viva',
           'details-datetime' : 'Giovedì 8 Giugno 2017 alle ore 08:30',
+          'details-date': 'Giovedì 8 Giugno 2017',
+          'details-time': '08:30',
           'details-loc' : 'Parco Natura Viva'
         },
         'id7' : {
@@ -146,6 +195,9 @@ $(document).ready(function(){
           'details-loc' : 'Piazza Duomo, Trento'
         }
       }
+
+  if(window.location.pathname === "/act-details.html"){
+
 
       if(window.location.hash) {
         // Fragment exists
@@ -300,6 +352,19 @@ $(document).ready(function(){
       $('#row-fine').fadeOut();
   })
 
+
+  $('#add-fine2').click(function(e){
+      e.preventDefault();
+      console.log('aa')
+      $('#row-fine2').fadeIn();
+  })
+
+  $('#remove-fine2').click(function(e){
+      e.preventDefault();
+      console.log('aa')
+      $('#row-fine2').fadeOut();
+  })
+
   if($('#groups-page').length>0){
     var group_title=$("#gdet-title").text();
     var group_descr=$("#gdet-descr").text();
@@ -313,6 +378,44 @@ $(document).ready(function(){
         Materialize.updateTextFields();
       }
     });
+  }
+
+  if ($('#activities-page').length > 0){
+
+    $('.edit-activity-modal').click(function(e){
+      e.preventDefault();
+      $('#modifica').data('act-id', $(this).data('activity'));
+    });
+
+    $('#modifica').modal({
+      ready: function(modal, trigger) {
+
+
+        var ida = $('#modifica').data('act-id');
+
+        var act_title = "XXX"
+        var act_descr = "XXX"
+        var act_loc = "XXX"
+        var act_date = "XXX"
+        var act_time = "XXX"
+        var act_group = "XXX"
+        var act_people = "XXX"
+
+        data = actDetailsData[ida];
+        console.log(data)
+        if(data != undefined){
+          $('#mod-titolo').val(data[ 'details-title']);
+          $('#mod-descrizione').val("Un'attività per stare tutti insieme in compagnia!");
+          $('#mod-luogo').val(data[ 'details-loc']);
+          $('#mod-data').val(data[ 'details-date']);
+          $('#mod-ora').val(data[ 'details-time']);
+          $('#mod-group-invite').val(act_group);
+          $('#mod-people-invite').val(act_people);
+        }
+        Materialize.updateTextFields();
+      }
+
+    })
   }
 
 });

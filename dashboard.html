@@ -80,7 +80,7 @@
             <form>
               <div class="input-field search-wrap z-depth-1">
                 <i class="material-icons prefix ">search</i>
-                <input type="text" id="search" class="autocomplete" value="" />
+                <input type="text" id="search" class="autocomplete activities-autocomplete" value="" />
                 <label for="search" class="">Cerca attività</label>
               </div>
            </form>
@@ -167,31 +167,52 @@
           </div>
         </div>
         <div class="row section">
-          <div class="col s2">
-            <div class="row">
-              <div class="col s1" style="background-color: #00E676"></div>
-              <div class="col s11">
-                <p>Obiettivo superato</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s1" style="background-color: #F44336"></div>
-              <div class="col s11">
-                <p>Obiettivo non superato</p>
-              </div>
-            </div>
+          <div class="col s12">
+            <h6><i class="material-icons inline">thumb_up</i>Questa settimana hai raggiunto il tuo obiettivo <strong>4</strong> volte, continua così!</h6>
           </div>
-          <div class="col s10">
-            <div class="ct-chart ct-minor-second"></div>
+          <div class="row">
+            <div class="col s2">
+              <div class="row">
+                <div class="col s1" style="background-color: #00E676"></div>
+                <div class="col s11">
+                  <p>Obiettivo superato</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s1" style="background-color: #F44336"></div>
+                <div class="col s11">
+                  <p>Obiettivo non superato</p>
+                </div>
+              </div>
+            </div>
+            <div class="col s10">
+              <div class="ct-chart ct-minor-second"></div>
+            </div>
           </div>
         </div>
 
         <div class="row section">
-          <div class="col s6">
-            <p>Questa chart compara l'attività fisica (in passi) fatta oggi con la media giornaliera dell'attività della scorsa settimana. Quella più alta può avere una stellina (o un simbolo di reward) che simboleggia il superamento</p>
+          <div class="col s12">
+            <h6><i class="material-icons inline">mood</i>Oggi hai fatto <strong>3400</strong> passi, quasi il doppio dei passi fatti in media la scorsa settimana! </h6>
           </div>
-          <div class="col s6">
-            <div class="ct-chart-pie ct-minor-second"></div>
+          <div class="row">
+            <div class="col s6">
+              <div class="row">
+                  <div class="col s1" style="background-color: #691A99"></div>
+                  <div class="col s11">
+                    <p>Passi fatti oggi</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s1" style="background-color: #68EFAD"></div>
+                  <div class="col s11">
+                    <p>Media passi al giorno della scorsa settimana</p>
+                  </div>
+                </div>
+            </div>
+            <div class="col s6">
+              <div class="ct-chart-pie ct-minor-second"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -252,13 +273,13 @@
               <li class="collection-item avatar">
                 <img src="img/cup-grey.png" alt="" class="circle small-img">
                 <span class="title">Hai sfidato Claudia</span>
-                <p>In <a href="#" style="color: #FF7043"> minuti</a> camminati fino al 10 maggio<br/><br/>
+                <p>In <a href="#" style="color: #FF7043"> minuti</a> camminati fino al 27 marzo<br/><br/>
                   <a href="#" style="color: #F44336">Hai perso</a></p>
               </li>
               <li class="collection-item avatar">
                 <img src="img/cup.png" alt="" class="circle">
                 <span class="title">Hai sfidato Paolo</span>
-                <p>In <a href="#" style="color: #2E7D32"> chilometri</a> percorsi fino al 27 marzo<br/><br/>
+                <p>In <a href="#" style="color: #2E7D32"> chilometri</a> percorsi fino al 10 marzo<br/><br/>
                   <a href="#" style="color: #00C853">Hai vinto</a></p>
               </li>
             </ul>
@@ -320,8 +341,10 @@
               <label>Invita</label>
             </div>
             <div class="input-field col s12">
-              <input type="text" id="autocomplete-input" class="autocomplete">
-              <label for="autocomplete-input">Invita persone</label>
+              <label class="active">Invita persone</label>
+              <div class="chips chips-autocomplete">
+
+              </div>
             </div>
           </div>
         </form>
@@ -368,11 +391,75 @@
   </div>
   <!-- fine modal -->
 
+  <!-- Crea sfida modal -->
+  <div id="chall-create" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Crea una sfida</h4>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <p>Chi vuoi sfidare? </p>
+              <div class="chips chips-autocomplete">
+
+              </div>
+              <div class="chip add-friend">
+                <img src="img/girl.png" alt="Contact Person">
+                Angela
+              </div>
+              <div class="chip add-friend">
+                <img src="img/man.png" alt="Contact Person">
+                Riccardo
+              </div>
+              <div class="chip add-friend">
+                <img src="img/girl-4.png" alt="Contact Person">
+                Elisa
+              </div>
+              <div class="chip add-friend">
+                <img src="img/boy.png" alt="Contact Person">
+                Mario
+              </div>
+              <div class="chip add-friend">
+                <img src="img/girl.png" alt="Contact Person">
+                Valentina
+              </div>
+              <div class="chip add-friend">
+                <img src="img/girl.png" alt="Contact Person">
+                Antonia
+              </div>
+              <div class="chip add-friend">
+                <img src="img/girl-3.png" alt="Contact Person">
+                Elena
+              </div>
+            </div>
+            <div class="input-field col s12 m6">
+              <select class="icons">
+                <option value="" disabled selected>Tipo di sfida</option>
+                <option value="" data-icon="img/footsteps.png" class="circle left">Passi</option>
+                <option value="" data-icon="img/stopwatch.png" class="circle left">Minuti</option>
+                <option value="" data-icon="img/dark-road.png" class="circle left">Chilometri</option>
+              </select>
+            </div>
+            <div class="input-field col s12">
+              <input id="end-chal" type="date" class="datepicker">
+              <label for="end-chal">Fino al ...</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat crea">Crea</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat annulla">Annulla</a>
+    </div>
+  </div>
+  <!-- fine modal -->
+
     <!--Import jQuery before materialize.js-->
   <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
 
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/materialize.js"></script>
   <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
   <script src="js/chartist-plugin-axistitle.min.js"></script>
   <script src="js/chartist-plugin-tooltip.min.js" ></script>
