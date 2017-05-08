@@ -1,7 +1,7 @@
 
    $(function(){
 
-      var w =  $(window).width()*6.5/12;
+      var w =  $(window).width()*8.6/12;
 
       var tabs =  $('#dashboard-tabs').tabs({
         onShow : function(t){
@@ -60,7 +60,7 @@
         axisY: {
           type: Chartist.FixedScaleAxis,
           onlyInteger: true,
-          divisor: 14,
+          divisor: 7,
           high: 7000,
           low: 0,
         },
@@ -117,17 +117,17 @@ lineChart.on('draw', function(data) {
     var triangle = new Chartist.Svg('path', {
       d: ['M',
         data.x,
-        data.y - 6,
+        data.y - 7,
         'L',
-        data.x - 6,
-        data.y + 3,
+        data.x - 7,
+        data.y + 4,
         'L',
-        data.x + 6,
-        data.y + 3,
+        data.x + 7,
+        data.y + 4,
         'z'].join(' '),
       style: 'fill-opacity: 1'
-    }, 'ct-area above');
-    data.element.replace(triangle);
+    }, 'ct-area above ttt');
+    data.element.parent().append(triangle);
 
 
     } else {
@@ -135,17 +135,17 @@ lineChart.on('draw', function(data) {
     var triangledown = new Chartist.Svg('path', {
       d: ['M',
         data.x,
-        data.y + 6,
+        data.y + 7,
         'L',
-        data.x + 6,
-        data.y - 3,
+        data.x + 7,
+        data.y - 4,
         'L',
-        data.x - 6,
-        data.y - 3,
+        data.x - 7,
+        data.y - 4,
         'z'].join(' '),
       style: 'fill-opacity: 1'
-    }, 'ct-area under');
-    data.element.replace(triangledown);
+    }, 'ct-area under ttt');
+    data.element.parent().append(triangledown);
     }
 
     // With data.element we get the Chartist SVG wrapper and we can replace the original point drawn by Chartist with our newly created triangle
@@ -191,7 +191,7 @@ lineChart.on('draw', function(data) {
       height: w/2,
       width: w/2,
       donut: true,
-      donutWidth: 50,
+      donutWidth: 70,
       donutSolid: true,
       startAngle: 240,
       showLabel: true

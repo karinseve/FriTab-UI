@@ -7,16 +7,15 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i" rel="stylesheet">
+
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
   <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
   <link rel="stylesheet" type="text/css" href="css/chartist-plugin-tooltip.css">
-
-
   <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
 
 </head>
@@ -109,12 +108,102 @@
       <div class="row">
         <div class="col s12">
           <ul class="tabs act-tabs" id="dashboard-tabs">
-            <li class="tab"><a href="#obiettivi" class="active black-text">obiettivi</a></li>
+            <li class="tab"><a href="#sfide" class="active black-text">sfide</a></li>
+            <li class="tab"><a href="#obiettivi" class=" black-text">obiettivi</a></li>
             <li class="tab"><a href="#conquiste" class="black-text">conquiste</a></li>
-            <li class="tab"><a href="#sfide" class="black-text">sfide</a></li>
           </ul>
         </div>
       </div>
+
+      <!-- Sfide -->
+      <div class="details col s12" id="sfide">
+        <div class="row">
+          <div class="col s2">
+            <img src="img/podium.png" alt="" class="responsive-img sec-icon">
+          </div>
+          <div class="col s10">
+            <h5>SFIDE</h5>
+          </div>
+        </div>
+
+        <div class="row section">
+          <div class="col s7">
+            <ul class="details tabs sfide-tabs z-depth-1">
+              <li class="tab">
+                <a href="#chall-act" class="active black-text">Sfide attive</a>
+               </li>
+              <li class="tab">
+                <a href="#chall-past" class="black-text">Sfide passate</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col s5 create-btn">
+            <a class="modal-trigger waves-effect waves-light btn" href="#chall-create">
+            <i class="material-icons left">add_circle</i> CREA SFIDA</a>
+          </div>
+        </div>
+        <div class="row section no-padding z-depth-1">
+
+          <div class="col s12" id="chall-act">
+            <ul class="collection">
+              <li class="collection-item avatar">
+                <img src="img/medieval-fencing.png" alt="" class="small-img">
+                <span class="title">Stai sfidando Alberto</span>
+                <p>In <span class="badge inline blue lighten-1 " style="color: #FFFFFF"> passi</span> percorsi<br/>
+                   Fino al 12 maggio</p>
+              </li>
+              <li class="collection-item avatar">
+                <img src="img/medieval-fencing.png" alt="" class="small-img">
+                <span class="title">Stai sfidando Massimo</span>
+                <p>In <span class="badge inline pink darken-1" style="color: #FFFFFF"> minuti</span> camminati<br/>
+                   Dal 5 maggio al 10 maggio </p>
+              </li>
+              <li class="collection-item avatar">
+                <img src="img/medieval-fencing.png" alt="" class="small-img">
+                <span class="title">Stai sfidando Cristina</span>
+                <p>In <span class="badge inline purple darken-1" style="color: #FFFFFF"> chilometri</span> percorsi<br/>
+                   Dal 13 maggio al 27 maggio</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col s12" id="chall-past">
+            <ul class="collection">
+              <li class="collection-item avatar">
+                <img src="img/cup.png" alt="" class="small-img">
+                <span class="title">Hai sfidato Matteo</span>
+                <span class="badge green white-text rounded" >Hai vinto</span>
+                <p>In <span class="badge inline blue lighten-1" style="color: #FFFFFF"> passi</span> percorsi fino al 2 aprile<br/><br/>
+              </li>
+              <li class="collection-item avatar">
+                <img src="img/cup-grey.png" alt="" class="small-img">
+                <span class="title">Hai sfidato Claudia</span>
+                <span class="badge deep-orange darken-2 white-text rounded">Hai perso</span>
+                <p>In <span class="badge inline pink darken-1" style="color: #FFFFFF"> minuti</span> camminati fino al 27 marzo<br/><br/>
+              </li>
+              <li class="collection-item avatar">
+                <img src="img/cup.png" alt="" class="small-img">
+                <span class="title">Hai sfidato Paolo</span>
+                <span class="badge green white-text rounded" style="color: #00C853">Hai vinto</span>
+                <p>In <span class="badge inline purple darken-1" style="color: #FFFFFF"> chilometri</span> percorsi fino al 10 marzo<br/><br/>
+              </li>
+              <li class="collection-item avatar">
+                <img src="img/cup-grey.png" alt="" class="small-img">
+                <span class="title">Hai sfidato Marco</span>
+                <span class="badge deep-orange darken-2 white-text rounded">Hai perso</span>
+                <p>In <span class="badge inline pink darken-1" style="color: #FFFFFF"> minuti</span> camminati fino al 2 febbario<br/><br/>
+              </li>
+              <li class="collection-item avatar">
+                <img src="img/cup.png" alt="" class="small-img">
+                <span class="title">Hai sfidato Antonia</span>
+                <span class="badge green white-text rounded" style="color: #00C853">Hai vinto</span>
+                <p>In <span class="badge inline purple darken-1" style="color: #FFFFFF"> chilometri</span> percorsi fino al 10 gennaio<br/><br/>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Fine Sfide -->
 
       <!-- Obiettivi -->
       <div class="details col s12" id="obiettivi">
@@ -126,7 +215,7 @@
             <h5>OBIETTIVI</h5>
           </div>
         </div>
-        <div class="row section">
+        <div class="row section z-depth-1 no-padding ">
           <div class="col s8">
             <h5>GIORNALIERI</h5>
           </div>
@@ -166,130 +255,51 @@
             <h5>CONQUISTE</h5>
           </div>
         </div>
-        <div class="row section">
-          <div class="col s12">
+        <div class="row section no-padding z-depth-1">
+          <div class="col s12 center-align green white-text banner">
             <h6><i class="material-icons inline">thumb_up</i>Questa settimana hai raggiunto il tuo obiettivo <strong>4</strong> volte, continua così!</h6>
           </div>
           <div class="row">
-            <div class="col s2">
-              <div class="row">
-                <div class="col s1" style="background-color: #00E676"></div>
-                <div class="col s11">
-                  <p>Obiettivo superato</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s1" style="background-color: #F44336"></div>
-                <div class="col s11">
-                  <p>Obiettivo non superato</p>
-                </div>
-              </div>
+            <div class="col s6">
+              <i class="left large material-icons inline" style="color: #00E676">arrow_drop_up</i>
+              <p>Obiettivo superato</p>
             </div>
-            <div class="col s10">
+            <div class="col s6">
+              <i class="left large material-icons inline"  style="color: #F44336">arrow_drop_down</i>
+              <p>Obiettivo non superato</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
               <div class="ct-chart ct-minor-second"></div>
             </div>
           </div>
         </div>
 
-        <div class="row section">
-          <div class="col s12">
-            <h6><i class="material-icons inline">mood</i>Oggi hai fatto <strong>3400</strong> passi, quasi il doppio dei passi fatti in media la scorsa settimana! </h6>
+        <div class="row section no-padding z-depth-1">
+          <div class="col s12 center-align green white-text banner">
+            <h6><i class="material-icons inline">mood</i>Oggi hai fatto <strong>3400</strong> passi, quasi il doppio dei passi fatti in media la scorsa settimana!</h6>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <div class="ct-chart-pie ct-minor-second"></div>
+            </div>
           </div>
           <div class="row">
             <div class="col s6">
-              <div class="row">
-                  <div class="col s1" style="background-color: #691A99"></div>
-                  <div class="col s11">
-                    <p>Passi fatti oggi</p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col s1" style="background-color: #68EFAD"></div>
-                  <div class="col s11">
-                    <p>Media passi al giorno della scorsa settimana</p>
-                  </div>
-                </div>
+              <i class="left large material-icons inline" style="color: #B39DDB">stop</i>
+              <p>Passi fatti oggi</p>
             </div>
             <div class="col s6">
-              <div class="ct-chart-pie ct-minor-second"></div>
+              <i class="left large material-icons inline"  style="color: #A5D6A7">stop</i>
+              <p>Media settimanale</p>
             </div>
           </div>
         </div>
       </div>
       <!-- Fine Conquiste -->
 
-      <!-- Sfide -->
-      <div class="details col s12" id="sfide">
-        <div class="row">
-          <div class="col s2">
-            <img src="img/podium.png" alt="" class="responsive-img sec-icon">
-          </div>
-          <div class="col s10">
-            <h5>SFIDE</h5>
-          </div>
-        </div>
-        <div class="row section">
-          <div class="col s7">
-            <ul class="details tabs act-tabs z-depth-1">
-              <li class="tab"><a href="#chall-act" class="active black-text">Sfide attive</a></li>
-              <li class="tab"><a href="#chall-past" class="black-text">Sfide passate</a></li>
-            </ul>
-          </div>
-          <div class="col s5 create-btn">
-            <a class="modal-trigger waves-effect waves-light btn" href="#chall-create"><i class="material-icons left">add_circle</i> CREA SFIDA</a>
-          </div>
-
-          <div class="col s12" id="chall-act">
-            <ul class="collection">
-              <li class="collection-item avatar">
-                <img src="img/medieval-fencing.png" alt="" class="circle">
-                <span class="title">Stai sfidando Alberto</span>
-                <p>In <a href="#" style="color: #40C4FF"> passi</a> percorsi<br/>
-                   Fino al 12 maggio</p>
-              </li>
-              <li class="collection-item avatar">
-                <img src="img/medieval-fencing.png" alt="" class="circle">
-                <span class="title">Stai sfidando Massimo</span>
-                <p>In <a href="#" style="color: #FF7043"> minuti</a> camminati<br/>
-                   Dal 5 maggio al 10 maggio </p>
-              </li>
-              <li class="collection-item avatar">
-                <img src="img/medieval-fencing.png" alt="" class="circle">
-                <span class="title">Stai sfidando Cristina</span>
-                <p>In <a href="#" style="color: #2E7D32"> chilometri</a> percorsi<br/>
-                   Dal 13 maggio al 27 maggio</p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col s12" id="chall-past">
-            <ul class="collection">
-              <li class="collection-item avatar">
-                <img src="img/cup.png" alt="" class="circle small-img">
-                <span class="title">Hai sfidato Matteo</span>
-                <p>In <a href="#" style="color: #40C4FF"> passi</a> percorsi fino al 2 aprile<br/><br/>
-                <a href="#" style="color: #00C853">Hai vinto</a></p>
-              </li>
-              <li class="collection-item avatar">
-                <img src="img/cup-grey.png" alt="" class="circle small-img">
-                <span class="title">Hai sfidato Claudia</span>
-                <p>In <a href="#" style="color: #FF7043"> minuti</a> camminati fino al 27 marzo<br/><br/>
-                  <a href="#" style="color: #F44336">Hai perso</a></p>
-              </li>
-              <li class="collection-item avatar">
-                <img src="img/cup.png" alt="" class="circle">
-                <span class="title">Hai sfidato Paolo</span>
-                <p>In <a href="#" style="color: #2E7D32"> chilometri</a> percorsi fino al 10 marzo<br/><br/>
-                  <a href="#" style="color: #00C853">Hai vinto</a></p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- Fine Sfide -->
-
-    </div>
-  </div>
+</div>
 </div>
 
   <!-- Crea modal Structure -->
@@ -328,12 +338,12 @@
           </div>
           <div class="row" id="row-fine" style="display: none">
             <div class="input-field col s4">
-              <input id="data" type="date" class="datepicker">
-              <label for="data" class="active">Data</label>
+              <input id="data-fine" type="date" class="datepicker">
+              <label for="data-fine" class="active">Data</label>
             </div>
             <div class="input-field col s4">
-              <input  id="ora" type="time" class="validate" placeholder="9:00" value="" />
-              <label for="ora" class="active">Ora</label>
+              <input  id="ora-fine" type="time" class="validate" placeholder="9:00" value="" />
+              <label for="ora-fine" class="active">Ora</label>
             </div>
             <div class="col s4">
               <p>
@@ -421,34 +431,6 @@
               <p>Chi vuoi sfidare? </p>
               <div class="chips chips-autocomplete">
 
-              </div>
-              <div class="chip add-friend">
-                <img src="img/girl.png" alt="Contact Person">
-                Angela
-              </div>
-              <div class="chip add-friend">
-                <img src="img/man.png" alt="Contact Person">
-                Riccardo
-              </div>
-              <div class="chip add-friend">
-                <img src="img/girl-4.png" alt="Contact Person">
-                Elisa
-              </div>
-              <div class="chip add-friend">
-                <img src="img/boy.png" alt="Contact Person">
-                Mario
-              </div>
-              <div class="chip add-friend">
-                <img src="img/girl.png" alt="Contact Person">
-                Valentina
-              </div>
-              <div class="chip add-friend">
-                <img src="img/girl.png" alt="Contact Person">
-                Antonia
-              </div>
-              <div class="chip add-friend">
-                <img src="img/girl-3.png" alt="Contact Person">
-                Elena
               </div>
             </div>
             <div class="input-field col s12 m6">

@@ -17,6 +17,12 @@ img.sec-icon {
 	margin-right: 0.25em;
 }
 
+.material-icons.inline.large {
+        top: 0.05em;
+        line-height: 0.35;
+        margin-right: 0;
+}
+
 .material-icons.icon-center{
 	margin-top: 0.2em;
 }
@@ -112,6 +118,10 @@ nav ul li.active.attivita a{
 	background-color: #FFF176;
 }
 
+.collapsible .collapsible-header.gruppi.active {
+    background-color: #4CAF50;
+}
+
 .tabs{
 	background-color: #CFD8DC; /*#90A4AE*/
 }
@@ -198,6 +208,9 @@ nav ul li.active.attivita a{
 	font-weight: bold;
 }
 
+.collection.w-overflow {
+    overflow: visible;
+}
 
 .input-field label {
 	color: #000000;
@@ -260,15 +273,54 @@ nav ul li.active.attivita a{
 	animation:none;
 }
 
+
+.float-chip{
+    display: block;
+    position: absolute;
+    left: -390%;
+    top: 0.25em;
+    background-color: #ccc;
+}
+
+
+
 .date-text {
 	font-size:0.75em;
 	color: grey;
 }
 
+
 .small-img {
 	max-height: 4em;
 }
 
+p .badge.inline {
+    display: inline-block;
+    float: none;
+    margin: 0 0.25em;
+    border-radius: 2px;
+}
+
+.badge.rounded {
+    border-radius: 2px;
+}
+
+
+
+.collection .collection-item.avatar .small-img {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.row .col.banner {
+    padding-bottom: 1em;
+       margin-bottom: 1em;
+}
 
 .ct-chart {
 	margin: 0 1em;
@@ -276,6 +328,13 @@ nav ul li.active.attivita a{
 
 .ct-chart .ct-label {
 	font-weight: bold;
+    color:#666;
+    font-size: 1.125em;
+}
+
+.ct-axis-title {
+    color:#333;
+    font-size: 1.25em;
 }
 
 /* Use this selector to override the line style on a given series */
@@ -294,9 +353,9 @@ nav ul li.active.attivita a{
 /* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
 .ct-series-a .ct-point {
   /* Colour of your points */
-  stroke: #1b5e20;
+  stroke: transparent;
   /* Size of your points */
-  stroke-width: 10px;
+  stroke-width: 20px;
 }
 
 .ct-series-a .ct-area {
@@ -321,17 +380,25 @@ nav ul li.active.attivita a{
 }
 
 .ct-chart-pie .ct-a .ct-slice-donut-solid {
-	fill: #691A99;
+	fill: #B39DDB;
 }
 
 .ct-chart-pie .ct-b .ct-slice-donut-solid {
-	fill: #68EFAD;
+	fill: #A5D6A7;
 }
 
 .ct-area.under {
 	fill: #F44336;
 }
 
+
+.ct-chart-donut {
+    margin-left: 20%;
+}
+
+.ct-chart-pie{
+    margin-bottom: -25%;
+}
 
 
 /* ----------------------------------------- */

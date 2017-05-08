@@ -4444,6 +4444,7 @@ if (jQuery) {
     this.init();
 
     this.handleEvents();
+    return self;
   };
 }( jQuery ));
 ;(function ($) {

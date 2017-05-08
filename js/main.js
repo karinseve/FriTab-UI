@@ -1,3 +1,5 @@
+  var curr_chip_auto;
+
 $(document).ready(function(){
 
   $('#name').modal();
@@ -11,6 +13,8 @@ $(document).ready(function(){
   $('#person-det').modal();
 
   $('#edit-dashboard').modal();
+
+  $('.sfide-tabs').tabs('select_tab', 'chall-act');
 
   var  peopleData = {
     'Angela': {
@@ -66,7 +70,7 @@ $(document).ready(function(){
   $('#crea-lista').modal({
     ready : function(modal, trigger){
 
-      $('.chips-autocomplete').material_chip({
+     curr_chip_auto = $('.chips-autocomplete').material_chip({
           data: [{
             tag:'Angela', image :  'img/girl.png'
           }],
@@ -77,13 +81,14 @@ $(document).ready(function(){
           minLength: 1
         }
       });
+     console.log(curr_chip_auto)
     }
   })
 
 
   $('#invite-friends').modal ({
     ready:function(modal, trigger){
-      $('.chips-autocomplete').material_chip({
+      curr_chip_auto =$('.chips-autocomplete').material_chip({
         autocompleteOptions: {
           data: peopleData,
           limit: Infinity,
@@ -93,9 +98,10 @@ $(document).ready(function(){
     }
   })
 
+
   $('#crea-att').modal({
     ready:function(modal, trigger){
-      $('.chips-autocomplete').material_chip({
+      curr_chip_auto = $('.chips-autocomplete').material_chip({
         autocompleteOptions: {
           data: peopleData,
           limit: Infinity,
@@ -107,7 +113,7 @@ $(document).ready(function(){
 
   $('#invite-group').modal({
     ready:function(modal, trigger){
-      $('.chips-autocomplete').material_chip({
+      curr_chip_auto =$('.chips-autocomplete').material_chip({
         autocompleteOptions: {
           data: groupData,
           limit: Infinity,
@@ -119,7 +125,7 @@ $(document).ready(function(){
 
   $('#crea-gruppo').modal({
     ready:function(modal, trigger){
-      $('.chips-autocomplete').material_chip({
+      curr_chip_auto =$('.chips-autocomplete').material_chip({
         autocompleteOptions: {
           data: peopleData,
           limit: Infinity,
@@ -407,8 +413,6 @@ var actDetailsData = {
   var myMin=$("#daily-min").text();
   $('#edit-dashboard').modal({
     ready: function(modal, trigger) {
-      console.log('cccc');
-      console.log(mySteps);
       if (mySteps!=null || myKm!=null || myMin!=null) {
         console.log(mySteps);
         $('#steps').val(mySteps)
@@ -422,33 +426,42 @@ var actDetailsData = {
 
   $('#add-fine').click(function(e){
       e.preventDefault();
-      console.log('aa')
       $('#row-fine').fadeIn();
   })
 
   $('#remove-fine').click(function(e){
       e.preventDefault();
-      console.log('aa')
       $('#row-fine').fadeOut();
   })
 
 
   $('#add-fine2').click(function(e){
       e.preventDefault();
-      console.log('aa')
       $('#row-fine2').fadeIn();
   })
 
   $('#remove-fine2').click(function(e){
       e.preventDefault();
-      console.log('aa')
       $('#row-fine2').fadeOut();
   })
 
   if($('#groups-page').length>0){
+
+    $('.pers-name').click(function(e){
+        e.preventDefault();
+        var person_name=$(this).text();
+        var person_cat=$(this).closest('.collection-item').find('.title.category').text();
+        var person_img=$(this).closest('.chip').find('.pers-img').attr('src');
+        $('#person-det').data('name',person_name)
+        $('#person-det').data('cat',person_cat)
+        $('#person-det').data('img',person_img)
+
+    });
+
     var group_title=$("#gdet-title").text();
     var group_descr=$("#gdet-descr").text();
-    console.log(group_title);
+
+
     $('#edit-group').modal({
       ready: function(modal, trigger) {
         $('.chips-autocomplete').material_chip({
@@ -478,6 +491,22 @@ var actDetailsData = {
         Materialize.updateTextFields();
       }
     });
+
+    $('#person-det').modal({
+      ready: function(modal, trigger) {
+        var person_name =$('#person-det').data('name')
+        var person_cat =$('#person-det').data('cat')
+        var person_img=$('#person-det').data('img')
+
+        if(person_name!=null || person_cat!=null) {
+          $('#pimg').attr("src", person_img);
+          $('#pname').text(person_name);
+          $('#cat').text(person_cat);
+          $('#pmail').text(person_name);
+        }
+        Materialize.updateTextFields();
+      }
+    });
   }
 
   if ($('#activities-page').length > 0){
@@ -498,27 +527,18 @@ var actDetailsData = {
         }
       });
 
-
         var ida = $('#modifica').data('act-id');
 
-        var act_title = "XXX"
-        var act_descr = "XXX"
-        var act_loc = "XXX"
-        var act_date = "XXX"
-        var act_time = "XXX"
-        var act_group = "XXX"
-        var act_people = "XXX"
-
         data = actDetailsData[ida];
-        console.log(data)
         if(data != undefined){
           $('#mod-titolo').val(data[ 'details-title']);
           $('#mod-descrizione').val("Un'attività per stare tutti insieme in compagnia!");
           $('#mod-luogo').val(data[ 'details-loc']);
           $('#mod-data').val(data[ 'details-date']);
           $('#mod-ora').val(data[ 'details-time']);
-          $('#mod-group-invite').val(act_group);
-          $('#mod-people-invite').val(act_people);
+          // TODO: selezione di questi
+          //$('#mod-group-invite').val(act_group);
+          //$('#mod-people-invite').val(act_people);
         }
         Materialize.updateTextFields();
       }
@@ -543,5 +563,24 @@ var actDetailsData = {
     $(this).closest('.collection').fadeOut();
     Materialize.toast('La persona è stata rimossa', 3000, 'rounded')
   });
+
+  $('.chip.add-friend').click(function(e){
+    $('.chips-autocomplete').find('input').val($(this).text().trim());
+    $('.chips-autocomplete').trigger('keydown.chips-add', '.chips input');
+
+    console.log("SS")
+  });
+
+
+  $("#nav-interno-start").click(function(e){
+    e.preventDefault();
+    $("#mappa-nav").fadeOut( "slow" ,function(){
+      $('#mappa-nav-int').fadeIn( "slow");
+    });
+
+  });
+
+
 });
+
 
