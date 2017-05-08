@@ -392,7 +392,7 @@ var actDetailsData = {
         createCookie('name', name, 1);
         createCookie('sesso', sesso, 1);
         myName = readCookie('name');
-        window.location = 'karinseve.github.io/Acanto/activities.html'
+        window.location = 'activities.html'
       }
   });
 
@@ -403,7 +403,7 @@ var actDetailsData = {
       eraseCookie('name');
       eraseCookie('sesso');
       myName=null;
-      window.location = 'karinseve.github.io/Acanto/initial.html'
+      window.location = 'initial.html'
     }
   });
 
