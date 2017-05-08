@@ -1,1 +1,1 @@
-# Prototipo progetto Acanto di Karin Sevegnani
+# Prototipo di Karin Sevegnani
