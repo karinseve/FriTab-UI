@@ -282,7 +282,7 @@ var actDetailsData = {
         }
       }
 
-  if(window.location.pathname === "/act-details.html"){
+  if(window.location.pathname.indexOf("/act-details.html") > -1){
 
 
       if(window.location.hash) {
@@ -299,7 +299,7 @@ var actDetailsData = {
       }
   }
 
-  if(window.location.pathname === "/past-act-details.html"){
+  if(window.location.pathname.indexOf("/past-act-details.html")>-1){
     var actDetailsData = {
       'id10' : {
           'past-details-day' : '10',
